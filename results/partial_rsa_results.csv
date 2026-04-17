@@ -1,0 +1,21 @@
+roi,rule,layer,rho_std,rho_partial,p_partial,delta
+V1,Random Weights,Conv1,0.0706,0.0657,0.0,-0.0048
+V1,Backprop,Conv1,0.0721,0.0652,0.0,-0.0069
+V1,Feedback Alignment,Conv1,0.0298,0.0223,0.0,-0.0075
+V1,Predictive Coding,Conv1,0.0567,0.0519,0.0,-0.0048
+V1,STDP,Conv1,0.0785,0.0734,0.0,-0.0051
+V2,Random Weights,Conv1,0.0388,0.0362,0.0,-0.0026
+V2,Backprop,Conv1,0.0496,0.0465,0.0,-0.0031
+V2,Feedback Alignment,Conv1,0.0138,0.0098,0.0,-0.004
+V2,Predictive Coding,Conv1,0.03,0.0274,0.0,-0.0026
+V2,STDP,Conv1,0.0457,0.043,0.0,-0.0027
+LOC,Random Weights,Conv3,-0.0043,-0.0047,0.0162,-0.0004
+LOC,Backprop,Conv3,0.0179,0.0175,0.0,-0.0003
+LOC,Feedback Alignment,Conv3,0.0043,0.0034,0.0821,-0.0008
+LOC,Predictive Coding,Conv3,0.0054,0.0049,0.0123,-0.0005
+LOC,STDP,Conv3,0.002,0.0012,0.5287,-0.0007
+IT,Random Weights,FC1,0.0042,0.0024,0.2174,-0.0018
+IT,Backprop,FC1,0.0204,0.0201,0.0,-0.0004
+IT,Feedback Alignment,FC1,0.0076,0.0071,0.0003,-0.0005
+IT,Predictive Coding,FC1,0.0173,0.0167,0.0,-0.0006
+IT,STDP,FC1,0.0094,0.0086,0.0,-0.0007
