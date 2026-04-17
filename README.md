@@ -53,20 +53,6 @@ Spearman ρ (model–brain alignment). Bold = best per ROI. Full statistics in `
 
 ---
 
-## Citation
-
-```bibtex
-@article{leutenegger2025learningrules,
-  title   = {Untrained CNNs Match Backpropagation at V1: A Systematic RSA Comparison of Four Learning Rules Against Human fMRI},
-  author  = {Leutenegger, Nils},
-  journal = {arXiv preprint},
-  year    = {2025},
-  url     = {https://arxiv.org/abs/XXXX.XXXXX}
-}
-```
-
----
-
 ## Acknowledgements
 
 Thanks to the creators of the THINGS-fMRI dataset for making their data publicly available, and to the Brain-Score team for their evaluation infrastructure.
