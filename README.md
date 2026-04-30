@@ -2,7 +2,6 @@
 
 > **A Systematic RSA Comparison of Four Learning Rules Against Human fMRI**  
 > Companion repository for the paper, currently corresponding to **arXiv v2**.  
-> For the repository state associated with the original submission, see [Release v1](https://github.com/nilsleut/learning-rules-rsa/releases/tag/v1).
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.16875-b31b1b.svg)](https://arxiv.org/abs/2604.16875)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776ab.svg)](https://www.python.org/)
