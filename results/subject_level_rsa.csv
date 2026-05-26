@@ -1,0 +1,61 @@
+roi,subject,rule,rho
+V1,sub-01,STDP,0.0579
+V1,sub-01,Backprop,0.0526
+V1,sub-01,Random Weights,0.0507
+V1,sub-01,Predictive Coding,0.0423
+V1,sub-01,Feedback Alignment,0.0228
+V1,sub-02,Random Weights,0.0922
+V1,sub-02,STDP,0.0906
+V1,sub-02,Backprop,0.0819
+V1,sub-02,Predictive Coding,0.0626
+V1,sub-02,Feedback Alignment,0.0395
+V1,sub-03,STDP,0.0144
+V1,sub-03,Random Weights,0.0142
+V1,sub-03,Backprop,0.0139
+V1,sub-03,Predictive Coding,0.0123
+V1,sub-03,Feedback Alignment,0.0077
+V2,sub-01,STDP,0.0336
+V2,sub-01,Random Weights,0.0327
+V2,sub-01,Backprop,0.0319
+V2,sub-01,Predictive Coding,0.0242
+V2,sub-01,Feedback Alignment,0.0121
+V2,sub-02,Backprop,0.0597
+V2,sub-02,Random Weights,0.0557
+V2,sub-02,STDP,0.054
+V2,sub-02,Predictive Coding,0.0336
+V2,sub-02,Feedback Alignment,0.0225
+V2,sub-03,Backprop,0.0059
+V2,sub-03,STDP,0.0025
+V2,sub-03,Random Weights,0.0022
+V2,sub-03,Feedback Alignment,0.002
+V2,sub-03,Predictive Coding,0.0017
+LOC,sub-01,Backprop,0.0135
+LOC,sub-01,STDP,0.0063
+LOC,sub-01,Random Weights,0.0052
+LOC,sub-01,Predictive Coding,0.005
+LOC,sub-01,Feedback Alignment,0.0049
+LOC,sub-02,Backprop,0.0119
+LOC,sub-02,Predictive Coding,0.0044
+LOC,sub-02,Feedback Alignment,0.0033
+LOC,sub-02,STDP,0.0006
+LOC,sub-02,Random Weights,-0.0087
+LOC,sub-03,Backprop,0.0083
+LOC,sub-03,Feedback Alignment,0.0007
+LOC,sub-03,Predictive Coding,-0.0001
+LOC,sub-03,Random Weights,-0.0019
+LOC,sub-03,STDP,-0.0022
+IT,sub-01,Backprop,0.0163
+IT,sub-01,Predictive Coding,0.0122
+IT,sub-01,STDP,0.0087
+IT,sub-01,Feedback Alignment,0.0067
+IT,sub-01,Random Weights,0.0041
+IT,sub-02,Predictive Coding,0.0188
+IT,sub-02,Backprop,0.0182
+IT,sub-02,Feedback Alignment,0.0079
+IT,sub-02,STDP,0.0034
+IT,sub-02,Random Weights,0.0011
+IT,sub-03,Backprop,0.0061
+IT,sub-03,STDP,0.0034
+IT,sub-03,Random Weights,0.0018
+IT,sub-03,Predictive Coding,0.0002
+IT,sub-03,Feedback Alignment,-0.0002

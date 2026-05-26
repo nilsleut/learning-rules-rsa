@@ -1,0 +1,25 @@
+rule,roi,spearman_rho,p_uncorr,sig,direction,n_epochs,p_fdr,sig_fdr
+Backprop,V1,1.0,0.0,***,increase,7,0.0,***
+Backprop,V2,1.0,0.0,***,increase,7,0.0,***
+Backprop,V3,1.0,0.0,***,increase,7,0.0,***
+Backprop,V4,1.0,0.0,***,increase,7,0.0,***
+Backprop,LOC,0.9643,0.0005,***,increase,7,0.0011,**
+Backprop,IT,0.8929,0.0068,**,increase,7,0.0126,*
+Feedback Alignment,V1,-1.0,0.0,***,decrease,7,0.0,***
+Feedback Alignment,V2,-1.0,0.0,***,decrease,7,0.0,***
+Feedback Alignment,V3,-1.0,0.0,***,decrease,7,0.0,***
+Feedback Alignment,V4,-1.0,0.0,***,decrease,7,0.0,***
+Feedback Alignment,LOC,0.8929,0.0068,**,increase,7,0.0126,*
+Feedback Alignment,IT,0.8571,0.0137,*,increase,7,0.0219,*
+Predictive Coding,V1,-0.5714,0.1802,ns,decrease,7,0.2276,ns
+Predictive Coding,V2,0.3929,0.3833,ns,increase,7,0.46,ns
+Predictive Coding,V3,0.7143,0.0713,ns,increase,7,0.1007,ns
+Predictive Coding,V4,-0.25,0.5887,ns,decrease,7,0.6143,ns
+Predictive Coding,LOC,-0.8571,0.0137,*,decrease,7,0.0219,*
+Predictive Coding,IT,-0.2857,0.5345,ns,decrease,7,0.6109,ns
+STDP,V1,-0.8214,0.0234,*,decrease,7,0.0352,*
+STDP,V2,-0.6429,0.1194,ns,decrease,7,0.1592,ns
+STDP,V3,-0.0714,0.879,ns,decrease,7,0.879,ns
+STDP,V4,0.25,0.5887,ns,increase,7,0.6143,ns
+STDP,LOC,1.0,0.0,***,increase,7,0.0,***
+STDP,IT,0.8929,0.0068,**,increase,7,0.0126,*

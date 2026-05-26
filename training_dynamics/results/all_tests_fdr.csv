@@ -1,0 +1,67 @@
+test,roi,epoch,rule_a,rule_b,rho_a,rho_b,delta,p_uncorr,sig,cohens_d,p_fdr,sig_fdr,p_global_fdr,sig_global,rule,rho_ep0,rho_ep1,spearman_rho,direction,n_epochs
+perm_bp_vs_other,V1,40.0,Feedback Alignment,Backprop,0.01939,0.02172,-0.00233,0.75,ns,-0.21,0.7941,ns,0.7857,ns,,,,,,
+perm_bp_vs_other,V1,40.0,Predictive Coding,Backprop,0.06388,0.02172,0.04216,0.0625,ns,3.968,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,V1,40.0,STDP,Backprop,0.05599,0.02172,0.03426,0.0625,ns,2.16,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,V2,40.0,Feedback Alignment,Backprop,0.01378,0.01213,0.00165,0.625,ns,0.253,0.7031,ns,0.6653,ns,,,,,,
+perm_bp_vs_other,V2,40.0,Predictive Coding,Backprop,0.0403,0.01213,0.02817,0.0625,ns,6.845,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,V2,40.0,STDP,Backprop,0.03966,0.01213,0.02753,0.0625,ns,2.718,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,V3,40.0,Feedback Alignment,Backprop,0.01099,0.01197,-0.00098,0.8125,ns,-0.22,0.8125,ns,0.8379,ns,,,,,,
+perm_bp_vs_other,V3,40.0,Predictive Coding,Backprop,0.03241,0.01197,0.02044,0.0625,ns,4.179,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,V3,40.0,STDP,Backprop,0.03131,0.01197,0.01933,0.0625,ns,2.61,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,V4,40.0,Feedback Alignment,Backprop,0.00716,0.0081,-0.00093,0.3125,ns,-0.582,0.375,ns,0.375,ns,,,,,,
+perm_bp_vs_other,V4,40.0,Predictive Coding,Backprop,0.01862,0.0081,0.01053,0.0625,ns,2.688,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,V4,40.0,STDP,Backprop,0.01831,0.0081,0.01021,0.0625,ns,2.479,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,LOC,40.0,Feedback Alignment,Backprop,0.00467,0.01093,-0.00626,0.0625,ns,-3.124,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,LOC,40.0,Predictive Coding,Backprop,0.00405,0.01093,-0.00688,0.0625,ns,-3.633,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,LOC,40.0,STDP,Backprop,0.00389,0.01093,-0.00704,0.0625,ns,-2.447,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,IT,40.0,Feedback Alignment,Backprop,0.00663,0.00806,-0.00143,0.1875,ns,-0.785,0.2411,ns,0.2335,ns,,,,,,
+perm_bp_vs_other,IT,40.0,Predictive Coding,Backprop,0.00679,0.00806,-0.00127,0.0625,ns,-1.409,0.0938,ns,0.0859,ns,,,,,,
+perm_bp_vs_other,IT,40.0,STDP,Backprop,0.00682,0.00806,-0.00124,0.1875,ns,-0.596,0.2411,ns,0.2335,ns,,,,,,
+epoch0_vs_ep1,V1,,,,,,-0.09161,0.0625,ns,-23.032,0.075,ns,0.0859,ns,Backprop,0.10221,0.0106,,,
+epoch0_vs_ep1,V2,,,,,,-0.05693,0.0625,ns,-59.241,0.075,ns,0.0859,ns,Backprop,0.06193,0.00501,,,
+epoch0_vs_ep1,V3,,,,,,-0.04261,0.0625,ns,-41.23,0.075,ns,0.0859,ns,Backprop,0.04894,0.00633,,,
+epoch0_vs_ep1,V4,,,,,,-0.01733,0.0625,ns,-12.483,0.075,ns,0.0859,ns,Backprop,0.02209,0.00476,,,
+epoch0_vs_ep1,LOC,,,,,,0.00545,0.0625,ns,7.739,0.075,ns,0.0859,ns,Backprop,-0.00065,0.00479,,,
+epoch0_vs_ep1,IT,,,,,,0.00039,0.625,ns,0.223,0.6522,ns,0.6653,ns,Backprop,0.00483,0.00522,,,
+epoch0_vs_ep1,V1,,,,,,-0.04476,0.0625,ns,-2.181,0.075,ns,0.0859,ns,Feedback Alignment,0.08877,0.04401,,,
+epoch0_vs_ep1,V2,,,,,,-0.0257,0.0625,ns,-2.028,0.075,ns,0.0859,ns,Feedback Alignment,0.0539,0.0282,,,
+epoch0_vs_ep1,V3,,,,,,-0.01936,0.0625,ns,-2.048,0.075,ns,0.0859,ns,Feedback Alignment,0.04376,0.0244,,,
+epoch0_vs_ep1,V4,,,,,,-0.00751,0.0625,ns,-1.805,0.075,ns,0.0859,ns,Feedback Alignment,0.01989,0.01238,,,
+epoch0_vs_ep1,LOC,,,,,,0.00322,0.0625,ns,2.222,0.075,ns,0.0859,ns,Feedback Alignment,-4e-05,0.00318,,,
+epoch0_vs_ep1,IT,,,,,,0.00093,0.25,ns,0.611,0.2857,ns,0.3056,ns,Feedback Alignment,0.00522,0.00615,,,
+epoch0_vs_ep1,V1,,,,,,-0.02357,0.0625,ns,-4.487,0.075,ns,0.0859,ns,Predictive Coding,0.09344,0.06986,,,
+epoch0_vs_ep1,V2,,,,,,-0.01889,0.0625,ns,-4.159,0.075,ns,0.0859,ns,Predictive Coding,0.05628,0.03739,,,
+epoch0_vs_ep1,V3,,,,,,-0.01646,0.0625,ns,-3.704,0.075,ns,0.0859,ns,Predictive Coding,0.04507,0.02862,,,
+epoch0_vs_ep1,V4,,,,,,-0.00459,0.0625,ns,-2.672,0.075,ns,0.0859,ns,Predictive Coding,0.02282,0.01823,,,
+epoch0_vs_ep1,LOC,,,,,,0.0,0.375,ns,0.447,0.4091,ns,0.442,ns,Predictive Coding,0.00437,0.00438,,,
+epoch0_vs_ep1,IT,,,,,,1e-05,0.0625,ns,2.021,0.075,ns,0.0859,ns,Predictive Coding,0.00745,0.00745,,,
+epoch0_vs_ep1,V1,,,,,,-0.02978,0.0625,ns,-5.681,0.075,ns,0.0859,ns,STDP,0.0967,0.06692,,,
+epoch0_vs_ep1,V2,,,,,,-0.01906,0.0625,ns,-3.764,0.075,ns,0.0859,ns,STDP,0.06251,0.04345,,,
+epoch0_vs_ep1,V3,,,,,,-0.02021,0.0625,ns,-4.953,0.075,ns,0.0859,ns,STDP,0.05108,0.03086,,,
+epoch0_vs_ep1,V4,,,,,,-0.00656,0.0625,ns,-4.162,0.075,ns,0.0859,ns,STDP,0.02367,0.01711,,,
+epoch0_vs_ep1,LOC,,,,,,0.00011,0.0625,ns,1.648,0.075,ns,0.0859,ns,STDP,0.00341,0.00352,,,
+epoch0_vs_ep1,IT,,,,,,1e-05,0.875,ns,0.102,0.875,ns,0.879,ns,STDP,0.00606,0.00606,,,
+monotone_trend,V1,,,,,,,0.0,***,,0.0,***,0.0,***,Backprop,,,1.0,increase,7.0
+monotone_trend,V2,,,,,,,0.0,***,,0.0,***,0.0,***,Backprop,,,1.0,increase,7.0
+monotone_trend,V3,,,,,,,0.0,***,,0.0,***,0.0,***,Backprop,,,1.0,increase,7.0
+monotone_trend,V4,,,,,,,0.0,***,,0.0,***,0.0,***,Backprop,,,1.0,increase,7.0
+monotone_trend,LOC,,,,,,,0.0005,***,,0.0011,**,0.003,**,Backprop,,,0.9643,increase,7.0
+monotone_trend,IT,,,,,,,0.0068,**,,0.0126,*,0.0346,*,Backprop,,,0.8929,increase,7.0
+monotone_trend,V1,,,,,,,0.0,***,,0.0,***,0.0,***,Feedback Alignment,,,-1.0,decrease,7.0
+monotone_trend,V2,,,,,,,0.0,***,,0.0,***,0.0,***,Feedback Alignment,,,-1.0,decrease,7.0
+monotone_trend,V3,,,,,,,0.0,***,,0.0,***,0.0,***,Feedback Alignment,,,-1.0,decrease,7.0
+monotone_trend,V4,,,,,,,0.0,***,,0.0,***,0.0,***,Feedback Alignment,,,-1.0,decrease,7.0
+monotone_trend,LOC,,,,,,,0.0068,**,,0.0126,*,0.0346,*,Feedback Alignment,,,0.8929,increase,7.0
+monotone_trend,IT,,,,,,,0.0137,*,,0.0219,*,0.0603,ns,Feedback Alignment,,,0.8571,increase,7.0
+monotone_trend,V1,,,,,,,0.1802,ns,,0.2276,ns,0.2332,ns,Predictive Coding,,,-0.5714,decrease,7.0
+monotone_trend,V2,,,,,,,0.3833,ns,,0.46,ns,0.4438,ns,Predictive Coding,,,0.3929,increase,7.0
+monotone_trend,V3,,,,,,,0.0713,ns,,0.1007,ns,0.0961,ns,Predictive Coding,,,0.7143,increase,7.0
+monotone_trend,V4,,,,,,,0.5887,ns,,0.6143,ns,0.6476,ns,Predictive Coding,,,-0.25,decrease,7.0
+monotone_trend,LOC,,,,,,,0.0137,*,,0.0219,*,0.0603,ns,Predictive Coding,,,-0.8571,decrease,7.0
+monotone_trend,IT,,,,,,,0.5345,ns,,0.6109,ns,0.6082,ns,Predictive Coding,,,-0.2857,decrease,7.0
+monotone_trend,V1,,,,,,,0.0234,*,,0.0352,*,0.0859,ns,STDP,,,-0.8214,decrease,7.0
+monotone_trend,V2,,,,,,,0.1194,ns,,0.1592,ns,0.1576,ns,STDP,,,-0.6429,decrease,7.0
+monotone_trend,V3,,,,,,,0.879,ns,,0.879,ns,0.879,ns,STDP,,,-0.0714,decrease,7.0
+monotone_trend,V4,,,,,,,0.5887,ns,,0.6143,ns,0.6476,ns,STDP,,,0.25,increase,7.0
+monotone_trend,LOC,,,,,,,0.0,***,,0.0,***,0.0,***,STDP,,,1.0,increase,7.0
+monotone_trend,IT,,,,,,,0.0068,**,,0.0126,*,0.0346,*,STDP,,,0.8929,increase,7.0

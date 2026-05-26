@@ -1,0 +1,9 @@
+*.pth
+*.npy
+*.zip
+*.pt
+__pycache__/
+*.pyc
+*.pyo
+data/
+*_partial.csv

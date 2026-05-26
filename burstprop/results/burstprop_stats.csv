@@ -1,0 +1,9 @@
+roi,layer,rule_a,rule_b,rho_a,rho_b,delta,p_perm,sig,cohens_d
+V1,Conv3,Burstprop,Random Weights,0.0582,0.09109,-0.03797,0.0,***,-0.677
+V1,Conv3,Burstprop,Backprop,0.0582,0.03346,0.09273,0.0,***,0.835
+V2,FC1,Burstprop,Random Weights,0.04512,0.05563,-0.05532,0.0,***,-0.275
+V2,FC1,Burstprop,Backprop,0.04512,0.01846,0.05172,0.0,***,0.848
+LOC,Conv3,Burstprop,Random Weights,0.01451,-0.00505,0.02017,0.0,***,1.439
+LOC,Conv3,Burstprop,Backprop,0.01451,0.01162,0.00275,0.258,ns,0.377
+IT,Conv3,Burstprop,Random Weights,0.01974,0.00777,0.01546,0.0,***,1.117
+IT,Conv3,Burstprop,Backprop,0.01974,0.01325,0.01357,0.0,***,0.458
