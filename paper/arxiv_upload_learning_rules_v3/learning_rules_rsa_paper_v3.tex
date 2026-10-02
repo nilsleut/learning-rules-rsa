@@ -46,7 +46,7 @@ Independent Researcher, Switzerland\\
 \maketitle
 
 \begin{abstract}
-\noindent\textbf{Revised version (v3).} This version replaces the noise ceiling, restricts all
+\noindent\textbf{Revised version (v4).} This version replaces the noise ceiling, restricts all
 analyses to stimulus pairs that were presented in different fMRI runs, and uses the repaired
 evaluation of all five conditions; see the revision note below.
 
@@ -59,7 +59,7 @@ A central question in computational neuroscience is whether the learning rule us
 \end{abstract}
 
 
-\section*{Revision note (v3)}
+\section*{Revision note (v4)}
 
 \noindent Earlier versions contained the following errors. (i)~The noise ceiling was
 described as split-half reliability with a Spearman--Brown correction; with three subjects
@@ -71,7 +71,7 @@ run component that is common to these two subjects; it inflated their agreement 
 bound at LOC and IT. All analyses now use only the $\NV{pairs.cr}$ of $\NV{pairs.total}$
 stimulus pairs ($\NV{pairs.cr.pct}\,\%$) that lie in different runs for every subject.
 (iii)~The PC and STDP conditions were evaluated with batch normalisation left in training
-mode. The correction note added to v2 in August 2026 identified this defect, but the values
+mode. The correction note of v3 (August 2026) identified this defect, but the values
 reported in the paper were not updated; all values are now from the repaired five-seed
 re-run. (iv)~Several values were rounded twice (e.g.\ $\NV{err.rnd.V1}$ printed as $0.076$),
 and the V1 gap was quoted from a different run (appendix, Table~\ref{tab:errata}). (v)~Two
@@ -86,7 +86,7 @@ $\lb{V1}$, $\lb{V2}$, $\lb{LOC}$ and $\lb{IT}$ (V1 to IT); the claim that the mo
 STDP exceeds it only in the per-subject convention; IT results are stated as not
 distinguishable at low reliability; statistics are stimulus-bootstrap CIs instead of
 permutation tests. What holds: the untrained network exceeds BP at V1 and V2, BP exceeds the
-untrained network at LOC, and FA has the lowest alignment at V1. Still on the original
+untrained network at LOC, and FA has the lowest alignment at V1. FA at V2 is no longer a primary comparison, because its ordering against BP and PC depends on the layer assigned to V2 (appendix, Table~\ref{tab:v2conv2}); reducing the family of primary comparisons from $\NV{nprimary.old}$ to $\NV{nprimary}$ does not change any significance decision (appendix, Table~\ref{tab:fdr}). Still on the original
 state are the filter and Gabor analysis (weights of the original model set; unaffected by the
 defect), the training curves, and the batch-normalisation calibration control (all stimulus
 pairs, mean-RDM convention); test accuracy is available for seed~0 only.
@@ -212,7 +212,7 @@ with $\tau_+ = \tau_- = 20$\,ms, $A_+ = A_- = 0.003$, $\text{lr} = 5 \times 10^{
 
 \textbf{Noise ceiling.} The lower bound follows \citet{nili2014}: each subject's RDM is correlated with the average RDM of the other two subjects, and the three correlations are averaged. It estimates how well a model that captures the structure shared across subjects would score, and is used here as a floor: a model below it leaves reliable shared structure unexplained. The upper bound (correlation of each subject with the average of all three, including itself) is not informative with three subjects: under a permutation null in which stimulus labels are shuffled independently per subject ($\NV{nperm}$ permutations), the upper bound stays large (V1: $\NV{ubnull.cr.V1.mean}$ against an observed $\NV{ub.cr.V1}$), because each subject contributes a third of the average it is compared with. It is therefore not shown in the figures. Under the same null the lower bound is $\NV{lbnull.cr.V1.mean} \pm \NV{lbnull.cr.V1.sd}$ (V1), so the observed lower bounds are far from chance at every ROI.
 
-\textbf{Uncertainty.} 95\% confidence intervals come from a stimulus bootstrap: $\NV{nboot}$ resamples of the 720 stimuli with replacement (seed $\NV{bootseed}$), shared by all conditions, ROIs and quantities. Within each resample, pairs of a stimulus with itself are dropped and the cross-run pair set is recomputed. Differences between conditions, and between a condition and the lower bound, are computed on the same resamples, so their intervals account for the correlation between them. We call a difference significant when its percentile interval excludes 0. The three statements the conclusions rest on are treated as primary comparisons: the untrained network vs.\ BP at V1 and V2, BP vs.\ the untrained network at LOC, and FA vs.\ each other condition at V1 ($\NV{nprimary}$ of the 40 pairwise comparisons). They were designated in this revision, not before the original analysis. All other pairwise comparisons are exploratory. No correction for multiple testing is applied to either set; all 40 intervals are reported, with the primary ones marked (appendix, Table~\ref{tab:pairwise}).
+\textbf{Uncertainty.} 95\% confidence intervals come from a stimulus bootstrap: $\NV{nboot}$ resamples of the 720 stimuli with replacement (seed $\NV{bootseed}$), shared by all conditions, ROIs and quantities. Within each resample, pairs of a stimulus with itself are dropped and the cross-run pair set is recomputed. Differences between conditions, and between a condition and the lower bound, are computed on the same resamples, so their intervals account for the correlation between them. We call a difference significant when its percentile interval excludes 0. The three statements the conclusions rest on are treated as primary comparisons: the untrained network vs.\ BP at V1 and V2, BP vs.\ the untrained network at LOC, and FA vs.\ each other condition at V1 ($\NV{nprimary}$ of the 40 pairwise comparisons). They were designated in this revision, not before the original analysis. All other pairwise comparisons are exploratory. No correction for multiple testing is applied in the main text; all 40 intervals are reported, with the primary ones marked (appendix, Table~\ref{tab:pairwise}), and Benjamini--Hochberg and Holm corrections of the primary family are given in the appendix (Table~\ref{tab:fdr}).
 
 \subsection{Partial RSA}
 
@@ -369,7 +369,7 @@ The author thanks Martin Schrimpf for the arXiv endorsement and helpful feedback
 
 \section*{Code Availability}
 
-Code and results: \url{https://github.com/nilsleut/learning-rules-rsa/tree/arxiv-v3}.
+Code and results: \url{https://github.com/nilsleut/learning-rules-rsa/tree/arxiv-v4}.
 
 \appendix
 
@@ -397,6 +397,16 @@ Code and results: \url{https://github.com/nilsleut/learning-rules-rsa/tree/arxiv
 \resizebox{\columnwidth}{!}{%
 \input{tab_v2conv2.tex}}
 \end{table}
+
+\textbf{Correction for multiple comparisons} (Table~\ref{tab:fdr}). Two-sided bootstrap $p$-values from the same $\NV{nboot}$ resamples, $p = (2\min(\#\{d_b \le 0\}, \#\{d_b \ge 0\}) + 1)/(B + 1)$, corrected by Benjamini--Hochberg (false discovery rate) and by Holm (family-wise error rate), each at the 5\,\% level, within the current family of $\NV{nprimary}$ primary comparisons and within the earlier family of $\NV{nprimary.old}$, which also contained FA against every other condition at V2. All $\NV{nprimary}$ comparisons remain significant under both corrections and both families.
+
+\begin{table*}[t]
+\centering
+\caption{Primary comparisons with bootstrap $p$-values and adjusted $p$-values (Benjamini--Hochberg, Holm) within the family of $\NV{nprimary}$ and the earlier family of $\NV{nprimary.old}$. Per-subject convention, cross-run pairs, repaired model set. The smallest attainable bootstrap $p$ is $1/(B+1)$.}
+\label{tab:fdr}
+\small
+\input{tab_fdr.tex}
+\end{table*}
 
 \textbf{Diagnostics of the run structure} (Table~\ref{tab:diag}). If the run component were shared beyond same-run pairs, the mean dissimilarity of each pair of runs would agree between sub-01 and sub-02. The Spearman correlation of their 45 run-pair means is small and not significant at any ROI (exact one-sided $p$ over all $\NV{rp.nperm}$ relabellings of sub-02's runs). With only 45 run pairs this test has little power, so block cleaning is reported as a robustness check rather than ruled out. Block cleaning changes the V1 luminance fit by $\NV{lum.s3.V1.chg}\,\%$ for sub-03, whose run order differs, and by $\NV{lum.s1.V1.chg}\,\%$ (sub-01) and $\NV{lum.s2.V1.chg}\,\%$ (sub-02); the pre-specified stop criterion (a decrease of more than 30\,\% for sub-01 or sub-02) is not met.
 

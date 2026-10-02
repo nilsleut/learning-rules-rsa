@@ -7122,6 +7122,63 @@ v2c.Conv1.stdp.fa.hi,0.0145545585172985,4,0.0146,results/paper_v3/v2_conv2_summa
 v2c.Conv2.stdp.fa,0.0096778532990341,4,+0.0097,results/paper_v3/v2_conv2_summary.csv,Conv2 stdp - feedback_alignment point,False
 v2c.Conv2.stdp.fa.lo,0.0047416843548418,4,0.0047,results/paper_v3/v2_conv2_summary.csv,Conv2 stdp - feedback_alignment ci_lo,False
 v2c.Conv2.stdp.fa.hi,0.0151646091410777,4,0.0152,results/paper_v3/v2_conv2_summary.csv,Conv2 stdp - feedback_alignment ci_hi,False
+fdr.rnd.bp.V1.d,0.0308268807020073,4,+0.0308,results/paper_v3/primary_fdr.csv,rnd-bp V1 diff,False
+fdr.rnd.bp.V1.lo,0.0185610137620213,4,0.0186,results/paper_v3/primary_fdr.csv,rnd-bp V1 ci_lo,False
+fdr.rnd.bp.V1.hi,0.0428111954311446,4,0.0428,results/paper_v3/primary_fdr.csv,rnd-bp V1 ci_hi,False
+fdr.rnd.bp.V1.p_boot,0.0009990009990009,4,0.0010,results/paper_v3/primary_fdr.csv,rnd-bp V1 p_boot,False
+fdr.rnd.bp.V1.bh_p_fam7,0.0013986013986013,4,0.0014,results/paper_v3/primary_fdr.csv,rnd-bp V1 bh_p_fam7,False
+fdr.rnd.bp.V1.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,rnd-bp V1 bh_p_fam11,False
+fdr.rnd.bp.V1.holm_p_fam7,0.0069930069930069,4,0.0070,results/paper_v3/primary_fdr.csv,rnd-bp V1 holm_p_fam7,False
+fdr.rnd.bp.V1.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,rnd-bp V1 holm_p_fam11,False
+fdr.rnd.bp.V2.d,0.0165286866253406,4,+0.0165,results/paper_v3/primary_fdr.csv,rnd-bp V2 diff,False
+fdr.rnd.bp.V2.lo,0.0071579298755007,4,0.0072,results/paper_v3/primary_fdr.csv,rnd-bp V2 ci_lo,False
+fdr.rnd.bp.V2.hi,0.0260794088328071,4,0.0261,results/paper_v3/primary_fdr.csv,rnd-bp V2 ci_hi,False
+fdr.rnd.bp.V2.p_boot,0.0009990009990009,4,0.0010,results/paper_v3/primary_fdr.csv,rnd-bp V2 p_boot,False
+fdr.rnd.bp.V2.bh_p_fam7,0.0013986013986013,4,0.0014,results/paper_v3/primary_fdr.csv,rnd-bp V2 bh_p_fam7,False
+fdr.rnd.bp.V2.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,rnd-bp V2 bh_p_fam11,False
+fdr.rnd.bp.V2.holm_p_fam7,0.0069930069930069,4,0.0070,results/paper_v3/primary_fdr.csv,rnd-bp V2 holm_p_fam7,False
+fdr.rnd.bp.V2.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,rnd-bp V2 holm_p_fam11,False
+fdr.rnd.bp.LOC.d,-0.0110268512721319,4,-0.0110,results/paper_v3/primary_fdr.csv,rnd-bp LOC diff,False
+fdr.rnd.bp.LOC.lo,-0.0205913291972052,4,-0.0206,results/paper_v3/primary_fdr.csv,rnd-bp LOC ci_lo,False
+fdr.rnd.bp.LOC.hi,-0.0022896467963275,4,-0.0023,results/paper_v3/primary_fdr.csv,rnd-bp LOC ci_hi,False
+fdr.rnd.bp.LOC.p_boot,0.0189810189810189,4,0.0190,results/paper_v3/primary_fdr.csv,rnd-bp LOC p_boot,False
+fdr.rnd.bp.LOC.bh_p_fam7,0.0189810189810189,4,0.0190,results/paper_v3/primary_fdr.csv,rnd-bp LOC bh_p_fam7,False
+fdr.rnd.bp.LOC.bh_p_fam11,0.0189810189810189,4,0.0190,results/paper_v3/primary_fdr.csv,rnd-bp LOC bh_p_fam11,False
+fdr.rnd.bp.LOC.holm_p_fam7,0.0189810189810189,4,0.0190,results/paper_v3/primary_fdr.csv,rnd-bp LOC holm_p_fam7,False
+fdr.rnd.bp.LOC.holm_p_fam11,0.0189810189810189,4,0.0190,results/paper_v3/primary_fdr.csv,rnd-bp LOC holm_p_fam11,False
+fdr.rnd.fa.V1.d,0.0445807542260158,4,+0.0446,results/paper_v3/primary_fdr.csv,rnd-fa V1 diff,False
+fdr.rnd.fa.V1.lo,0.0313431260893106,4,0.0313,results/paper_v3/primary_fdr.csv,rnd-fa V1 ci_lo,False
+fdr.rnd.fa.V1.hi,0.0580498361416554,4,0.0580,results/paper_v3/primary_fdr.csv,rnd-fa V1 ci_hi,False
+fdr.rnd.fa.V1.p_boot,0.0009990009990009,4,0.0010,results/paper_v3/primary_fdr.csv,rnd-fa V1 p_boot,False
+fdr.rnd.fa.V1.bh_p_fam7,0.0013986013986013,4,0.0014,results/paper_v3/primary_fdr.csv,rnd-fa V1 bh_p_fam7,False
+fdr.rnd.fa.V1.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,rnd-fa V1 bh_p_fam11,False
+fdr.rnd.fa.V1.holm_p_fam7,0.0069930069930069,4,0.0070,results/paper_v3/primary_fdr.csv,rnd-fa V1 holm_p_fam7,False
+fdr.rnd.fa.V1.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,rnd-fa V1 holm_p_fam11,False
+fdr.bp.fa.V1.d,0.0137538735240085,4,+0.0138,results/paper_v3/primary_fdr.csv,bp-fa V1 diff,False
+fdr.bp.fa.V1.lo,0.0092047389976171,4,0.0092,results/paper_v3/primary_fdr.csv,bp-fa V1 ci_lo,False
+fdr.bp.fa.V1.hi,0.0185529150567763,4,0.0186,results/paper_v3/primary_fdr.csv,bp-fa V1 ci_hi,False
+fdr.bp.fa.V1.p_boot,0.0009990009990009,4,0.0010,results/paper_v3/primary_fdr.csv,bp-fa V1 p_boot,False
+fdr.bp.fa.V1.bh_p_fam7,0.0013986013986013,4,0.0014,results/paper_v3/primary_fdr.csv,bp-fa V1 bh_p_fam7,False
+fdr.bp.fa.V1.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,bp-fa V1 bh_p_fam11,False
+fdr.bp.fa.V1.holm_p_fam7,0.0069930069930069,4,0.0070,results/paper_v3/primary_fdr.csv,bp-fa V1 holm_p_fam7,False
+fdr.bp.fa.V1.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,bp-fa V1 holm_p_fam11,False
+fdr.fa.pc.V1.d,-0.0033306812586348,4,-0.0033,results/paper_v3/primary_fdr.csv,fa-pc V1 diff,False
+fdr.fa.pc.V1.lo,-0.0053779593652503,4,-0.0054,results/paper_v3/primary_fdr.csv,fa-pc V1 ci_lo,False
+fdr.fa.pc.V1.hi,-0.0010748402671358,4,-0.0011,results/paper_v3/primary_fdr.csv,fa-pc V1 ci_hi,False
+fdr.fa.pc.V1.p_boot,0.0029970029970029,4,0.0030,results/paper_v3/primary_fdr.csv,fa-pc V1 p_boot,False
+fdr.fa.pc.V1.bh_p_fam7,0.0034965034965034,4,0.0035,results/paper_v3/primary_fdr.csv,fa-pc V1 bh_p_fam7,False
+fdr.fa.pc.V1.bh_p_fam11,0.0036630036630036,4,0.0037,results/paper_v3/primary_fdr.csv,fa-pc V1 bh_p_fam11,False
+fdr.fa.pc.V1.holm_p_fam7,0.0069930069930069,4,0.0070,results/paper_v3/primary_fdr.csv,fa-pc V1 holm_p_fam7,False
+fdr.fa.pc.V1.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,fa-pc V1 holm_p_fam11,False
+fdr.fa.stdp.V1.d,-0.0179261009194794,4,-0.0179,results/paper_v3/primary_fdr.csv,fa-stdp V1 diff,False
+fdr.fa.stdp.V1.lo,-0.0229486529174695,4,-0.0229,results/paper_v3/primary_fdr.csv,fa-stdp V1 ci_lo,False
+fdr.fa.stdp.V1.hi,-0.0129630600694369,4,-0.0130,results/paper_v3/primary_fdr.csv,fa-stdp V1 ci_hi,False
+fdr.fa.stdp.V1.p_boot,0.0009990009990009,4,0.0010,results/paper_v3/primary_fdr.csv,fa-stdp V1 p_boot,False
+fdr.fa.stdp.V1.bh_p_fam7,0.0013986013986013,4,0.0014,results/paper_v3/primary_fdr.csv,fa-stdp V1 bh_p_fam7,False
+fdr.fa.stdp.V1.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,fa-stdp V1 bh_p_fam11,False
+fdr.fa.stdp.V1.holm_p_fam7,0.0069930069930069,4,0.0070,results/paper_v3/primary_fdr.csv,fa-stdp V1 holm_p_fam7,False
+fdr.fa.stdp.V1.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,fa-stdp V1 holm_p_fam11,False
+nprimary.old,,-1,11,results/paper_v3/primary_fdr.csv,size of the earlier primary family,False
 nprimary,,-1,7,make_macros.py PRIMARY,number of primary comparisons,False
 v2quote.0,,-1,0.076,learning_rules_rsa_paper_v2.tex,"printed value: Random, V1",False
 v2quote.1,,-1,0.034,learning_rules_rsa_paper_v2.tex,"printed value: BP, V1",False

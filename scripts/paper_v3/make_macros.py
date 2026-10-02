@@ -478,7 +478,7 @@ def main():
     L += ["\\bottomrule", "\\end{tabular}"]
     (PAPER / "tab_accuracy.tex").write_text("\n".join(L) + "\n", encoding="utf-8")
     L = ["\\begin{tabular}{lcc}", "\\toprule",
-         "Condition & v2: training accuracy (\\%) & v3: test accuracy (\\%) \\\\", "\\midrule"]
+         "Condition & v2: training accuracy (\\%) & v4: test accuracy (\\%) \\\\", "\\midrule"]
     for i, rk in enumerate(("bp", "stdp", "pc", "fa", "rnd")):
         puts(f"v2acc.{rk}", OLDACC[rk], "learning_rules_rsa_paper_v2.tex", f"Table 1, {CSVNAME[rk]}")
         L.append(f"{CSVNAME[rk]} & ${OLDACC[rk]}$ & ${MAC[f'acc.{rk}']}$ \\\\")
@@ -604,6 +604,32 @@ def main():
         L.append(f"{RNAME[a]} $-$ {RNAME[b]} & " + " & ".join(cells) + f" & {'yes' if same[(a, b)] else 'no'} \\\\")
     L += ["\\bottomrule", "\\end{tabular}"]
     (PAPER / "tab_v2conv2.tex").write_text("\n".join(L) + "\n", encoding="utf-8")
+
+    # ── multiple-comparison correction: primary family of 7 vs the earlier 11 ─────
+    FD = P3 / "primary_fdr.csv"
+    fd = pd.read_csv(FD)
+    assert not json.loads((P3 / "primary_fdr.json").read_text())["any_decision_differs_7_vs_11_or_vs_uncorrected"]
+    f7 = fd[fd.in_family7]
+    assert len(f7) == 7 and f7[["uncorrected_sig", "bh_sig_fam7", "bh_sig_fam11", "holm_sig_fam7",
+                                "holm_sig_fam11"]].all().all()           # text: no decision changes
+    L = ["\\begin{tabular}{llcccccc}", "\\toprule",
+         "Comparison & ROI & $\\Delta\\rho_{\\text{subj}}$ [95\\% CI] & $p_{\\text{boot}}$ & BH, 7 & BH, 11 & Holm, 7 & Holm, 11 \\\\",
+         "\\midrule"]
+    for _, r in f7.iterrows():
+        a, b = r.comparison.split("-")
+        k = f"fdr.{a}.{b}.{r.roi}"
+        sel = f"{r.comparison} {r.roi}"
+        put(k + ".d", r["diff"], 4, rel(FD), f"{sel} diff", sign=True)
+        put(k + ".lo", r.ci_lo, 4, rel(FD), f"{sel} ci_lo")
+        put(k + ".hi", r.ci_hi, 4, rel(FD), f"{sel} ci_hi")
+        cells = []
+        for c in ("p_boot", "bh_p_fam7", "bh_p_fam11", "holm_p_fam7", "holm_p_fam11"):
+            cells.append(f"${put(f'{k}.{c}', r[c], 4, rel(FD), f'{sel} {c}')}$")
+        L.append(f"{RNAME[a]} $-$ {RNAME[b]} & {r.roi} & ${MAC[k + '.d']}\\;[{MAC[k + '.lo']},{MAC[k + '.hi']}]$ & "
+                 + " & ".join(cells) + " \\\\")
+    L += ["\\bottomrule", "\\end{tabular}"]
+    (PAPER / "tab_fdr.tex").write_text("\n".join(L) + "\n", encoding="utf-8")
+    puts("nprimary.old", "11", rel(FD), "size of the earlier primary family")
 
     puts("nprimary", str(len(PRIMARY)), "make_macros.py PRIMARY", "number of primary comparisons")
     assert len(PRIMARY) == 7

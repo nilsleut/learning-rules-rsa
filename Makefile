@@ -1,4 +1,4 @@
-# Paper v3 (arXiv:2604.16875): numbers -> PDF -> number check.
+# Paper v4 (arXiv:2604.16875): numbers -> PDF -> number check.
 # check_numbers.py reads the compiled PDF and .aux, so `check` compiles first.
 # Without make: python scripts/paper_v3/build_and_check.py (same steps).
 

@@ -2,9 +2,11 @@
 
 > ⚠️ **Correction (August 2026).** The predictive-coding and STDP results in this repository are affected by an evaluation-mode defect: both model classes overrode `eval()` with a no-op, so their batch-normalization layers stayed in training mode during feature extraction and normalized each evaluation batch by its own statistics, while the random, backpropagation and feedback-alignment conditions used their stored running statistics. Correction notes identifying the affected results accompany the current arXiv versions of both papers; repairing the defect leaves random, backpropagation and feedback alignment unchanged to within Δρ ≤ 0.0013, changes the two affected conditions substantially, and reverses the central claim of the training-dynamics study. The full repaired five-seed re-run, and the resolution analysis that came out of it, are at **[nilsleut/evaluation-resolution-rsa](https://github.com/nilsleut/evaluation-resolution-rsa)** ([arXiv:2608.12408](https://arxiv.org/abs/2608.12408)).
 
-## v3 (October 2026)
+## v4 (October 2026)
 
-Revision of arXiv:2604.16875 on the repaired five-seed model set. Tag `arxiv-v3` is the state the paper cites.
+Revision of arXiv:2604.16875 on the repaired five-seed model set (arXiv v4; v3 is the August 2026 correction note). Tag `arxiv-v4` is the state the paper cites. Folder and file names keep the working name `v3` (`paper/arxiv_upload_learning_rules_v3/`, `scripts/paper_v3/`, `results/paper_v3/`).
+
+**History and superseded material.** The Git history of this repository starts on 26 May 2026, after arXiv v1 (18 April) and v2 (29 April); neither is reproducible as a commit. `paper/learning_rules_rsa_paper.pdf` is the arXiv v1 text. It, and the top-level `programs/`, `results/` and `figures/` of the original analysis, are **superseded and contain errors corrected in v4** (noise ceiling, shared presentation order, evaluation-mode defect of PC and STDP, double rounding; see the revision note in the paper). They are kept because earlier arXiv versions link to this repository. Tag `arxiv-v2-correction-notice` marks the commit that added the correction notice (14 August 2026).
 
 **What was added**
 

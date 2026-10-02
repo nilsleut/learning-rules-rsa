@@ -1,0 +1,6 @@
+{
+  "n_boot": 1000,
+  "alpha": 0.05,
+  "any_decision_differs_7_vs_11_or_vs_uncorrected": false,
+  "min_p_attainable": 0.000999000999000999
+}

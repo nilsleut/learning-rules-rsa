@@ -1,4 +1,4 @@
-quantity,v2 lines,v2 printed,"v3 (per subject, cross-run)",v3 mean-RDM,key,source,note
+quantity,v2 lines,v2 printed,"v4 (per subject, cross-run)",v4 mean-RDM,key,source,note
 "Random, V1","42, 279, 398",0.076,0.053,0.077,rho.ps.cr.bn.rnd.V1,results/crossrun/step2_summary.csv,
 "BP, V1","42, 279, 285, 398, 402",0.034,0.022,0.034,rho.ps.cr.bn.bp.V1,results/crossrun/step2_summary.csv,
 "Random - BP, V1","42, 121, 279, 398",+0.044,+0.031,+0.043,d.ps.cr.bn.rnd.bp.V1,results/crossrun/step2_draws.csv,v2 quoted the resolution study's gap
@@ -33,10 +33,10 @@ untrained network vs V1 (correction note),91,0.076,0.053,0.077,rho.ps.cr.bn.rnd.
 "calibration control, CIFAR statistics",82,+0.041,+0.041,,cal.B,bncal_rows.csv - bnfix_sweep.csv,unchanged (original analysis)
 "calibration control, THINGS statistics",82,+0.033,+0.033,,cal.D,bncal_rows.csv - bnfix_sweep.csv,unchanged (original analysis)
 initialisation scale factor,100,2.4,2.4,,init.ratio,derived,unchanged
-"accuracy, BP (Table 1)",250,82.4,75.0,,acc.bp,results/paper_v3/accuracy.csv,"v2: training batches; v3: test set, seed 0"
-"accuracy, STDP (Table 1)",251,63.2,57.4,,acc.stdp,results/paper_v3/accuracy.csv,"v2: training batches; v3: test set, seed 0"
-"accuracy, PC (Table 1)",252,56.6,56.7,,acc.pc,results/paper_v3/accuracy.csv,"v2: training batches; v3: test set, seed 0"
-"accuracy, FA (Table 1)",253,39.0,38.8,,acc.fa,results/paper_v3/accuracy.csv,"v2: training batches; v3: test set, seed 0"
+"accuracy, BP (Table 1)",250,82.4,75.0,,acc.bp,results/paper_v3/accuracy.csv,"v2: training batches; v4: test set, seed 0"
+"accuracy, STDP (Table 1)",251,63.2,57.4,,acc.stdp,results/paper_v3/accuracy.csv,"v2: training batches; v4: test set, seed 0"
+"accuracy, PC (Table 1)",252,56.6,56.7,,acc.pc,results/paper_v3/accuracy.csv,"v2: training batches; v4: test set, seed 0"
+"accuracy, FA (Table 1)",253,39.0,38.8,,acc.fa,results/paper_v3/accuracy.csv,"v2: training batches; v4: test set, seed 0"
 "accuracy, Random (Table 1)",254,10.0,10.0,,acc.rnd,results/paper_v3/accuracy.csv,chance level in both
 STDP accuracy in Methods,216,63,57.4,,acc.stdp,results/paper_v3/accuracy.csv,
 FA accuracy in text,"287, 404",39,38.8,,acc.fa,results/paper_v3/accuracy.csv,

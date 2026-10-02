@@ -1,7 +1,7 @@
 \documentclass[10pt,twocolumn]{article}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL arxiv_upload_learning_rules_v2/learning_rules_rsa_paper_v2.tex   Fri Aug 14 10:05:43 2026
-%DIF ADD arxiv_upload_learning_rules_v3/learning_rules_rsa_paper_v3.tex   Fri Oct  2 18:29:42 2026
+%DIF ADD arxiv_upload_learning_rules_v3/learning_rules_rsa_paper_v3.tex   Fri Oct  2 20:41:12 2026
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -143,7 +143,7 @@ Independent Researcher, Switzerland\\
 \maketitle
 
 \begin{abstract}
-\noindent\textbf{\DIFdelbegin \DIFdel{Correction }\DIFdelend \DIFaddbegin \DIFadd{Revised version }\DIFaddend (\DIFdelbegin \DIFdel{August 2026}\DIFdelend \DIFaddbegin \DIFadd{v3}\DIFaddend ).} \DIFdelbegin \DIFdel{An evaluation-mode defect affected the predictive-coding and STDP conditions of this study; those results should not be
+\noindent\textbf{\DIFdelbegin \DIFdel{Correction }\DIFdelend \DIFaddbegin \DIFadd{Revised version }\DIFaddend (\DIFdelbegin \DIFdel{August 2026}\DIFdelend \DIFaddbegin \DIFadd{v4}\DIFaddend ).} \DIFdelbegin \DIFdel{An evaluation-mode defect affected the predictive-coding and STDP conditions of this study; those results should not be
 used pending re-computation. The random, backpropagation and feedback-alignment
 conditions, which carry the untrained-versus-trained claim, are unaffected. See the
 correction note following this abstract}\DIFdelend \DIFaddbegin \DIFadd{This version replaces the noise ceiling, restricts all
@@ -159,7 +159,7 @@ A central question in computational neuroscience is whether the learning rule us
 \end{abstract}
 
 
-\section*{\DIFdelbegin \DIFdel{Correction }\DIFdelend \DIFaddbegin \DIFadd{Revision }\DIFaddend note (\DIFdelbegin \DIFdel{August 2026}\DIFdelend \DIFaddbegin \DIFadd{v3}\DIFaddend )}
+\section*{\DIFdelbegin \DIFdel{Correction }\DIFdelend \DIFaddbegin \DIFadd{Revision }\DIFaddend note (\DIFdelbegin \DIFdel{August 2026}\DIFdelend \DIFaddbegin \DIFadd{v4}\DIFaddend )}
 
 \noindent \DIFdelbegin \textbf{\DIFdel{A defect affecting two of five conditions.}} %DIFAUXCMD
 \DIFdel{In the implementation
@@ -171,25 +171,12 @@ computing activations, so for those two conditions the batch-normalisation layer
 remained in training mode and normalised each evaluation batch by its own statistics,
 while the random, backpropagation and feedback-alignment conditions used their stored
 running statistics. This is a rule-correlated difference in the evaluation pipeline,
-not in the learning rules. }%DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\DIFdel{Repairing the defect and re-running the full five-seed design leaves the random, backpropagation and feedback-alignment conditions unchanged to within
-$\Delta\rho \le 0.0013$ at V1 across six evaluation resolutions, and reproduces the
-untouched random condition bit-identically. It changes the two affected conditions
-substantially. At V1 }\DIFdelend \DIFaddbegin \DIFadd{Earlier versions contained the following errors. (i)~The noise ceiling was
+not in }\DIFdelend \DIFaddbegin \DIFadd{Earlier versions contained the following errors. (i)~The noise ceiling was
 described as split-half reliability with a Spearman--Brown correction; with three subjects
-that is not a valid estimate, }\DIFaddend and \DIFdelbegin \DIFdel{$224$\,px, predictive coding falls from $\rho = 0.056$ to
-$\rho = 0.016$ and STDP from $\rho = 0.064$ to $\rho = 0.037$.
-}%DIFDELCMD < 
+that is not a valid estimate, and }\DIFaddend the \DIFdelbegin \DIFdel{learning rules. }%DIFDELCMD < 
 
 %DIFDELCMD < %%%
-\DIFdel{The following claims of this paper are therefore }\emph{\DIFdel{not supported}} %DIFAUXCMD
-\DIFdel{and should be
-disregarded: that STDP achieves the highest V1 alignment among trained rules; that predictive coding and STDP lead among trained rules at V1/V2; and }\DIFdelend the \DIFdelbegin \DIFdel{associated
-discussion (``PC and STDP as biologically plausible routes to V1 alignment'') and
-conclusion.
-}\DIFdelend \DIFaddbegin \DIFadd{printed bounds could not be reproduced from any stored
+\DIFdel{Repairing the defect and re-running the full }\DIFdelend \DIFaddbegin \DIFadd{printed bounds could not be reproduced from any stored
 result. It is replaced by the leave-one-subject-out lower bound of \mbox{%DIFAUXCMD
 \citet{nili2014}}\hskip0pt%DIFAUXCMD
 ; the upper
@@ -199,7 +186,23 @@ run component that is common to these two subjects; it inflated their agreement 
 bound at LOC and IT. All analyses now use only the $\NV{pairs.cr}$ of $\NV{pairs.total}$
 stimulus pairs ($\NV{pairs.cr.pct}\,\%$) that lie in different runs for every subject.
 (iii)~The PC and STDP conditions were evaluated with batch normalisation left in training
-mode. }\DIFaddend The \DIFdelbegin \DIFdel{reported values for random weights, backpropagation and feedback
+mode. The correction note of v3 (August 2026) identified this defect, but the values
+reported in the paper were not updated; all values are now from the repaired }\DIFaddend five-seed
+\DIFdelbegin \DIFdel{design leaves the random, backpropagation and feedback-alignment conditions unchanged to within
+$\Delta\rho \le 0.0013$ at }\DIFdelend \DIFaddbegin \DIFadd{re-run. (iv)~Several values were rounded twice (e.g.\ $\NV{err.rnd.V1}$ printed as $0.076$),
+and the }\DIFaddend V1 \DIFdelbegin \DIFdel{across six evaluation resolutions, and reproduces the untouched random condition bit-identically. It changes the two affected conditions
+substantially.
+At V1 and $224$\,px, predictive coding falls from $\rho = 0.056$ to
+$\rho = 0.016$ and STDP from $\rho = 0.064$ to $\rho = 0.037$. }%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The following claims of this paper are therefore }\emph{\DIFdel{not supported}} %DIFAUXCMD
+\DIFdel{and should be
+disregarded: that STDP achieves the highest V1 alignment among trained rules; that
+predictive coding and STDP lead among trained rules at V1/V2; and the associated
+discussion (``PC and STDP as biologically plausible routes to V1 alignment'')and
+conclusion. The reported values for random weights,
+backpropagation and feedback
 alignment, and the FDR-corrected comparisons among them, are unaffected. }%DIFDELCMD < 
 
 %DIFDELCMD < \noindent%%%
@@ -207,12 +210,10 @@ alignment, and the FDR-corrected comparisons among them, are unaffected. }%DIFDE
 \DIFdel{The untrained condition's
 batch-normalisation layers hold their initialised statistics, so in evaluation mode
 they act as the identity, whereas every trained condition carries statistics
-accumulated during training. This is a difference between the conditions that the paper did not report. A $2\times2$ calibration control varying the calibration set and the calibration resolution, with the convolutional weights held bit-identical,
-indicates that it does not produce the result: with statistics calibrated at the
-evaluation resolution the untrained network still exceeds backpropagation at }\DIFdelend \DIFaddbegin \DIFadd{correction note added to v2 in August 2026 identified this defect, but the values
-reported in the paper were not updated; all values are now from the repaired five-seed
-re-run. (iv)~Several values were rounded twice (e.g.\ $\NV{err.rnd.V1}$ printed as $0.076$),
-and the }\DIFaddend V1 \DIFdelbegin \DIFdel{by
+accumulated during training. This is a difference between the conditions that the
+paper did not report. A $2\times2$ calibration control varying the calibration set and
+the calibration resolution, with the convolutional weights held bit-identical, indicates that it does not produce the result: with statistics calibrated at the
+evaluation resolution the untrained network still exceeds backpropagation at V1 by
 $+0.041$ (}\DIFdelend \DIFaddbegin \DIFadd{gap was quoted from a different run (appendix, Table~\ref{tab:errata}). (v)~Two
 statements about LOC contradicted each other. (vi)~The hierarchy figure showed, for each
 layer, the mean over all four ROIs, contrary to its caption, which described the fixed
@@ -220,16 +221,16 @@ layer-to-ROI mapping; it now shows that mapping. (vii)~The untrained network was
 He-normal initialised; it uses PyTorch's default }\texttt{\DIFadd{kaiming\_uniform\_}}\DIFadd{, while FA and
 STDP use }\texttt{\DIFadd{kaiming\_normal\_}}\DIFadd{. (viii)~The accuracy table reported accuracy on training
 batches; it now reports }\DIFaddend CIFAR-10 \DIFdelbegin \DIFdel{statistics)or $+0.033$ (statistics from a disjoint pool of THINGS
-images)}\DIFdelend \DIFaddbegin \DIFadd{test accuracy. What changes: the lower bounds are
-$\lb{V1}$, $\lb{V2}$}\DIFaddend , \DIFdelbegin \DIFdel{$5/5$ seeds. The central result of this paper is not an artefact of an
-unnormalised baseline. It is, however, strongly dependent on the evaluation
-resolution, which this paper held fixed
-at $224$\,px; see \newid. }%DIFDELCMD < 
+images), $5/5$ seeds. The central result of this paper is not an artefact of an
+unnormalised baseline. It is, however, strongly dependent on }\DIFdelend \DIFaddbegin \DIFadd{test accuracy. What changes: the lower bounds are
+$\lb{V1}$, $\lb{V2}$, $\lb{LOC}$ and $\lb{IT}$ (V1 to IT); the claim that }\DIFaddend the \DIFdelbegin \DIFdel{evaluation
+resolution, which this paper held fixed at $224$\,px; see \newid.
+}%DIFDELCMD < 
 
 %DIFDELCMD < \noindent%%%
 \textbf{\DIFdel{On the noise-ceiling argument.}} %DIFAUXCMD
 \DIFdel{Section~4.2 argues that because all
-conditions lie within or near the split-half noise ceiling, they }\DIFdelend \DIFaddbegin \DIFadd{$\lb{LOC}$ and $\lb{IT}$ (V1 to IT); the claim that the models
+conditions lie within or near the split-half noise ceiling, they }\DIFdelend \DIFaddbegin \DIFadd{models
 ``}\DIFaddend exhaust most of the available signal\DIFdelbegin \DIFdel{. That is true and
 less reassuring than it reads: a single scalar
 luminance value per image reaches $\rho = 0.075$ against the same }\DIFdelend \DIFaddbegin \DIFadd{'' is withdrawn; PC no longer exceeds BP at }\DIFaddend V1\DIFdelbegin \DIFdel{RDM, essentially
@@ -237,10 +238,11 @@ matching }\DIFdelend \DIFaddbegin \DIFadd{, and
 STDP exceeds it only in the per-subject convention; IT results are stated as not
 distinguishable at low reliability; statistics are stimulus-bootstrap CIs instead of
 permutation tests. What holds: }\DIFaddend the \DIFaddbegin \DIFadd{untrained network exceeds BP at V1 and V2, BP exceeds the
-}\DIFaddend untrained network \DIFdelbegin \DIFdel{'s $0.076$ (\newid). The luminance figure involves no
-model and no readout, so it bounds the brain side directly; the models' figures are
-specific to rank correlation on globally pooled features. Occupying most of the
-resolvable signal }\DIFdelend \DIFaddbegin \DIFadd{at LOC, and FA has the lowest alignment }\DIFaddend at V1\DIFdelbegin \DIFdel{under this comparison is a low bar. }%DIFDELCMD < 
+}\DIFaddend untrained network \DIFdelbegin \DIFdel{'s $0.076$ (\newid). The luminance figure involves no model and no readout, so it bounds the brain side directly; }\DIFdelend \DIFaddbegin \DIFadd{at LOC, and FA has the lowest alignment at V1. FA at V2 is no longer a primary comparison, because its ordering against BP and PC depends on the layer assigned to V2 (appendix, Table~\ref{tab:v2conv2}); reducing the family of primary comparisons from $\NV{nprimary.old}$ to $\NV{nprimary}$ does not change any significance decision (appendix, Table~\ref{tab:fdr}). Still on the original
+state are the filter and Gabor analysis (weights of the original model set; unaffected by the
+defect), }\DIFaddend the \DIFdelbegin \DIFdel{models' figures are
+specific to rank correlation on globally pooled features. Occupying most of the resolvable signal at V1 under this comparison is a low bar.
+}%DIFDELCMD < 
 
 %DIFDELCMD < \noindent%%%
 \textbf{\DIFdel{Two smaller corrections.}} %DIFAUXCMD
@@ -250,9 +252,7 @@ default }\texttt{\DIFdel{kaiming\_uniform\_}}%DIFAUXCMD
 \DIFdel{; feedback alignment and STDP do call
 }\texttt{\DIFdel{kaiming\_normal\_}}%DIFAUXCMD
 \DIFdel{, so the initialisation scale differs by roughly a factor of
-$2.4$ at Conv1}\DIFdelend \DIFaddbegin \DIFadd{. Still on the original
-state are the filter and Gabor analysis (weights of the original model set; unaffected by the
-defect), the training curves}\DIFaddend , and the \DIFdelbegin \DIFdel{single untrained condition is the matched control for three of
+$2.4$ at Conv1}\DIFdelend \DIFaddbegin \DIFadd{training curves}\DIFaddend , and the \DIFdelbegin \DIFdel{single untrained condition is the matched control for three of
 the five conditions rather than all five. Separately, Limitation~(8)raised the
 possibility that evaluating $32$\,px-trained models at $224$\,px contributes to the
 random baseline's V1 advantage; that limitation is now quantified as a main effect in
@@ -413,7 +413,7 @@ with $\tau_+ = \tau_- = 20$\,ms, $A_+ = A_- = 0.003$, $\text{lr} = 5 \times 10^{
 %DIFDELCMD < 
 
 %DIFDELCMD < %%%
-\DIFdel{Pairwise differences between conditions were assessed using permutation tests ($N = 1{,}000$). For each pair of conditions $A$ and $B$, we computed the observed difference $\Delta\rho = \rho(A, \text{brain}) - \rho(B, \text{brain})$. Under $H_0\colon \Delta\rho = 0$, the brain RDM vector was randomly permuted to generate a null distribution of $\Delta\rho$ values; $p$ is the fraction of null $|\Delta\rho|$ values exceeding the observed $|\Delta\rho|$.Because the minimum resolvable $p$-value at $N = 1{,}000$ is $p = 0.001$, all $p$-values reported as $p < 0.001$ should be interpreted as $p \leq 0.001$.All }\DIFdelend \DIFaddbegin \textbf{\DIFadd{Uncertainty.}} \DIFadd{95\% confidence intervals come from a stimulus bootstrap: $\NV{nboot}$ resamples of the 720 stimuli with replacement (seed $\NV{bootseed}$), shared by all conditions, ROIs and quantities. Within each resample, pairs of a stimulus with itself are dropped and the cross-run pair set is recomputed. Differences between conditions, and between a condition and the lower bound, are computed on the same resamples, so their intervals account for the correlation between them. We call a difference significant when its percentile interval excludes 0. The three statements the conclusions rest on are treated as primary comparisons: the untrained network vs.\ BP at V1 and V2, BP vs.\ the untrained network at LOC, and FA vs.\ each other condition at V1 ($\NV{nprimary}$ of the }\DIFaddend 40 pairwise comparisons\DIFdelbegin \DIFdel{(10 pairs $\times$ 4 ROIs)were corrected for multiple comparisons using the Benjamini--Hochberg FDR procedure. Effect sizes are reported as descriptive Cohen's $d$ computed from per-subject RSA score distributions ($N = 3$; these values should be interpreted with caution given the small sample}\DIFdelend )\DIFaddbegin \DIFadd{. They were designated in this revision, not before the original analysis. All other pairwise comparisons are exploratory. No correction for multiple testing is applied to either set; all 40 intervals are reported, with the primary ones marked (appendix, Table~\ref{tab:pairwise})}\DIFaddend .
+\DIFdel{Pairwise differences between conditions were assessed using permutation tests ($N = 1{,}000$). For each pair of conditions $A$ and $B$, we computed the observed difference $\Delta\rho = \rho(A, \text{brain}) - \rho(B, \text{brain})$. Under $H_0\colon \Delta\rho = 0$, the brain RDM vector was randomly permuted to generate a null distribution of $\Delta\rho$ values; $p$ is the fraction of null $|\Delta\rho|$ values exceeding the observed $|\Delta\rho|$.Because the minimum resolvable $p$-value at $N = 1{,}000$ is $p = 0.001$, all $p$-values reported as $p < 0.001$ should be interpreted as $p \leq 0.001$.All }\DIFdelend \DIFaddbegin \textbf{\DIFadd{Uncertainty.}} \DIFadd{95\% confidence intervals come from a stimulus bootstrap: $\NV{nboot}$ resamples of the 720 stimuli with replacement (seed $\NV{bootseed}$), shared by all conditions, ROIs and quantities. Within each resample, pairs of a stimulus with itself are dropped and the cross-run pair set is recomputed. Differences between conditions, and between a condition and the lower bound, are computed on the same resamples, so their intervals account for the correlation between them. We call a difference significant when its percentile interval excludes 0. The three statements the conclusions rest on are treated as primary comparisons: the untrained network vs.\ BP at V1 and V2, BP vs.\ the untrained network at LOC, and FA vs.\ each other condition at V1 ($\NV{nprimary}$ of the }\DIFaddend 40 pairwise comparisons\DIFdelbegin \DIFdel{(10 pairs $\times$ 4 ROIs)were corrected for multiple comparisons using the }\DIFdelend \DIFaddbegin \DIFadd{). They were designated in this revision, not before the original analysis. All other pairwise comparisons are exploratory. No correction for multiple testing is applied in the main text; all 40 intervals are reported, with the primary ones marked (appendix, Table~\ref{tab:pairwise}), and }\DIFaddend Benjamini--Hochberg \DIFdelbegin \DIFdel{FDR procedure. Effect sizes are reportedas descriptive Cohen's $d$ computed from per-subject RSA score distributions ($N = 3$; these values should be interpreted with caution given the small sample}\DIFdelend \DIFaddbegin \DIFadd{and Holm corrections of the primary family are given in the appendix (Table~\ref{tab:fdr}}\DIFaddend ).
 
 \subsection{Partial RSA}
 
@@ -707,7 +707,7 @@ The author thanks Martin Schrimpf for the arXiv endorsement and helpful feedback
 \section*{Code Availability}
 
 Code and results: \DIFdelbegin %DIFDELCMD < \url{https://github.com/nilsleut/learning-rules-rsa}%%%
-\DIFdelend \DIFaddbegin \url{https://github.com/nilsleut/learning-rules-rsa/tree/arxiv-v3}\DIFaddend .
+\DIFdelend \DIFaddbegin \url{https://github.com/nilsleut/learning-rules-rsa/tree/arxiv-v4}\DIFaddend .
 
 \DIFaddbegin \appendix
 
@@ -738,6 +738,17 @@ Code and results: \DIFdelbegin %DIFDELCMD < \url{https://github.com/nilsleut/lea
 \resizebox{\columnwidth}{!}{%
 \input{tab_v2conv2.tex}}
 \end{table}
+
+\textbf{\DIFadd{Correction for multiple comparisons}} \DIFadd{(Table~\ref{tab:fdr}). Two-sided bootstrap $p$-values from the same $\NV{nboot}$ resamples, $p = (2\min(\#\{d_b \le 0\}, \#\{d_b \ge 0\}) + 1)/(B + 1)$, corrected by Benjamini--Hochberg (false discovery rate) and by Holm (family-wise error rate), each at the 5\,\% level, within the current family of $\NV{nprimary}$ primary comparisons and within the earlier family of $\NV{nprimary.old}$, which also contained FA against every other condition at V2. All $\NV{nprimary}$ comparisons remain significant under both corrections and both families.
+}
+
+\begin{table*}[t]
+\centering
+\caption{\DIFaddFL{Primary comparisons with bootstrap $p$-values and adjusted $p$-values (Benjamini--Hochberg, Holm) within the family of $\NV{nprimary}$ and the earlier family of $\NV{nprimary.old}$. Per-subject convention, cross-run pairs, repaired model set. The smallest attainable bootstrap $p$ is $1/(B+1)$.}}
+\label{tab:fdr}
+\small
+\input{tab_fdr.tex}
+\end{table*}
 
 \textbf{\DIFadd{Diagnostics of the run structure}} \DIFadd{(Table~\ref{tab:diag}). If the run component were shared beyond same-run pairs, the mean dissimilarity of each pair of runs would agree between sub-01 and sub-02. The Spearman correlation of their 45 run-pair means is small and not significant at any ROI (exact one-sided $p$ over all $\NV{rp.nperm}$ relabellings of sub-02's runs). With only 45 run pairs this test has little power, so block cleaning is reported as a robustness check rather than ruled out. Block cleaning changes the V1 luminance fit by $\NV{lum.s3.V1.chg}\,\%$ for sub-03, whose run order differs, and by $\NV{lum.s1.V1.chg}\,\%$ (sub-01) and $\NV{lum.s2.V1.chg}\,\%$ (sub-02); the pre-specified stop criterion (a decrease of more than 30\,\% for sub-01 or sub-02) is not met.
 }
