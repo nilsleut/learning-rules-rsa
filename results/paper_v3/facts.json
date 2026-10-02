@@ -1,0 +1,159 @@
+{
+  "sub_loc": {
+    "sub-01": {
+      "top": "stdp",
+      "points": {
+        "rnd": 0.0048,
+        "bp": 0.0064,
+        "fa": 0.0053,
+        "pc": 0.0054,
+        "stdp": 0.0066
+      },
+      "bp_minus": {
+        "rnd": [
+          0.0016,
+          -0.0082,
+          0.0121
+        ],
+        "fa": [
+          0.0011,
+          -0.0061,
+          0.0085
+        ],
+        "pc": [
+          0.001,
+          -0.006,
+          0.0082
+        ],
+        "stdp": [
+          -0.0002,
+          -0.0077,
+          0.0073
+        ]
+      },
+      "bp_vs_sig": {
+        "rnd": false,
+        "fa": false,
+        "pc": false,
+        "stdp": false
+      }
+    },
+    "sub-02": {
+      "top": "bp",
+      "points": {
+        "rnd": -0.0094,
+        "bp": 0.0142,
+        "fa": 0.0069,
+        "pc": 0.0072,
+        "stdp": 0.0066
+      },
+      "bp_minus": {
+        "rnd": [
+          0.0235,
+          0.0007,
+          0.0466
+        ],
+        "fa": [
+          0.0073,
+          -0.0062,
+          0.0217
+        ],
+        "pc": [
+          0.007,
+          -0.0069,
+          0.0221
+        ],
+        "stdp": [
+          0.0075,
+          -0.0068,
+          0.0216
+        ]
+      },
+      "bp_vs_sig": {
+        "rnd": true,
+        "fa": false,
+        "pc": false,
+        "stdp": false
+      }
+    },
+    "sub-03": {
+      "top": "bp",
+      "points": {
+        "rnd": -0.0044,
+        "bp": 0.0035,
+        "fa": -0.0012,
+        "pc": 0.0003,
+        "stdp": -0.0003
+      },
+      "bp_minus": {
+        "rnd": [
+          0.0079,
+          -0.0025,
+          0.0191
+        ],
+        "fa": [
+          0.0047,
+          -0.0021,
+          0.0121
+        ],
+        "pc": [
+          0.0032,
+          -0.0036,
+          0.0103
+        ],
+        "stdp": [
+          0.0038,
+          -0.0034,
+          0.0117
+        ]
+      },
+      "bp_vs_sig": {
+        "rnd": false,
+        "fa": false,
+        "pc": false,
+        "stdp": false
+      }
+    }
+  },
+  "seed_it": {
+    "trained_all_overlap": false,
+    "rnd_overlaps": {
+      "bp": false,
+      "fa": true,
+      "pc": true,
+      "stdp": true
+    }
+  },
+  "overlap_pairs_IT": {
+    "rnd-bp": false,
+    "rnd-fa": true,
+    "rnd-pc": true,
+    "rnd-stdp": true,
+    "bp-fa": false,
+    "bp-pc": true,
+    "bp-stdp": true,
+    "fa-pc": true,
+    "fa-stdp": true,
+    "pc-stdp": true
+  },
+  "v1_mr_ns": [
+    [
+      "bp",
+      "stdp"
+    ]
+  ],
+  "v2_ns": {
+    "ps": [
+      [
+        "bp",
+        "stdp"
+      ]
+    ],
+    "mr": [
+      [
+        "bp",
+        "stdp"
+      ]
+    ]
+  }
+}

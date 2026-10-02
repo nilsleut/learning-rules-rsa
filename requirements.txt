@@ -1,0 +1,9 @@
+# Analysis pipeline (fMRI RDM extraction, RSA, noise ceiling, sub-03 / runz checks).
+# Training scripts additionally need torch/torchvision (and modal for the *_modal.py runs).
+numpy>=2.0
+scipy>=1.13
+pandas>=2.2
+h5py>=3.10
+pillow>=10
+matplotlib>=3.8
+tqdm>=4.66

@@ -1,0 +1,6 @@
+rule,seed_idx,seed,n_test,test_acc
+random_weights,0,42,10000,0.1
+backprop,0,42,10000,0.7503
+feedback_alignment,0,42,10000,0.388
+predictive_coding,0,42,10000,0.5672
+stdp,0,42,10000,0.5737

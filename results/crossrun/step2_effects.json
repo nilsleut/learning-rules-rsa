@@ -1,0 +1,18 @@
+{
+  "validation_max_abs_diff_vs_bnfix_sweep": 4.946499776690982e-07,
+  "n_validated": 120,
+  "luminance_vs_V1": {
+    "all|persub": 0.05222758667839128,
+    "all|meanrdm": 0.07446756909776268,
+    "cr|persub": 0.05362694818007679,
+    "cr|meanrdm": 0.07644429811261444,
+    "crb|persub": 0.04999275380147982
+  },
+  "random_224_V1": {
+    "all|meanrdm": 0.07546476115155384,
+    "all|persub": 0.052579133786152546,
+    "cr|meanrdm": 0.0766563657848314,
+    "cr|persub": 0.05317954842046244,
+    "crb|persub": 0.05341659580331104
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "subjects": {
+    "sub-01": {
+      "n": 720,
+      "n_unique": 720,
+      "n_equal_to_sub01_by_position": 720,
+      "first_mismatch_vs_sub01": null,
+      "missing_vs_sub01": [],
+      "extra_vs_sub01": [],
+      "order_file_equals_recomputed_from_own_metadata": true,
+      "metadata_rows": 9840,
+      "metadata_index_is_0..n-1": true,
+      "trial_id_equals_row": true,
+      "h5_shape_voxels_x_trials": [
+        211339,
+        9840
+      ],
+      "h5_column_labels_equal_0..n-1": true,
+      "h5_n_columns_equals_metadata_rows": true,
+      "h5_voxel_ids_equal_voxel_metadata": true,
+      "voxel_metadata_subject_id": [
+        1
+      ],
+      "stim_metadata_subject_id": [
+        1
+      ],
+      "the_720_trial_type": {
+        "train": 720
+      },
+      "the_720_reps_per_stimulus_max": 1,
+      "the_720_sessions": [
+        3
+      ],
+      "the_720_runs_per_session": 10,
+      "exemplar_suffix_numbers": [
+        1
+      ],
+      "suffix_pattern_unparsed": 0
+    },
+    "sub-02": {
+      "n": 720,
+      "n_unique": 720,
+      "n_equal_to_sub01_by_position": 720,
+      "first_mismatch_vs_sub01": null,
+      "missing_vs_sub01": [],
+      "extra_vs_sub01": [],
+      "order_file_equals_recomputed_from_own_metadata": true,
+      "metadata_rows": 9840,
+      "metadata_index_is_0..n-1": true,
+      "trial_id_equals_row": true,
+      "h5_shape_voxels_x_trials": [
+        226950,
+        9840
+      ],
+      "h5_column_labels_equal_0..n-1": true,
+      "h5_n_columns_equals_metadata_rows": true,
+      "h5_voxel_ids_equal_voxel_metadata": true,
+      "voxel_metadata_subject_id": [
+        2
+      ],
+      "stim_metadata_subject_id": [
+        2
+      ],
+      "the_720_trial_type": {
+        "train": 720
+      },
+      "the_720_reps_per_stimulus_max": 1,
+      "the_720_sessions": [
+        2
+      ],
+      "the_720_runs_per_session": 10,
+      "exemplar_suffix_numbers": [
+        1
+      ],
+      "suffix_pattern_unparsed": 0
+    },
+    "sub-03": {
+      "n": 720,
+      "n_unique": 720,
+      "n_equal_to_sub01_by_position": 720,
+      "first_mismatch_vs_sub01": null,
+      "missing_vs_sub01": [],
+      "extra_vs_sub01": [],
+      "order_file_equals_recomputed_from_own_metadata": true,
+      "metadata_rows": 9840,
+      "metadata_index_is_0..n-1": true,
+      "trial_id_equals_row": true,
+      "h5_shape_voxels_x_trials": [
+        189164,
+        9840
+      ],
+      "h5_column_labels_equal_0..n-1": true,
+      "h5_n_columns_equals_metadata_rows": true,
+      "h5_voxel_ids_equal_voxel_metadata": true,
+      "voxel_metadata_subject_id": [
+        3
+      ],
+      "stim_metadata_subject_id": [
+        3
+      ],
+      "the_720_trial_type": {
+        "train": 720
+      },
+      "the_720_reps_per_stimulus_max": 1,
+      "the_720_sessions": [
+        5
+      ],
+      "the_720_runs_per_session": 10,
+      "exemplar_suffix_numbers": [
+        1
+      ],
+      "suffix_pattern_unparsed": 0
+    }
+  },
+  "trial_id_identical_across_subjects": false,
+  "session_identical_across_subjects": false
+}

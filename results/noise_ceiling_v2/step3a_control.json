@@ -1,0 +1,134 @@
+{
+  "published_table2": {
+    "V1": {
+      "line": 299,
+      "Random Weights": 0.076,
+      "BP": 0.034,
+      "FA": 0.012,
+      "PC": 0.056,
+      "STDP": 0.064
+    },
+    "V2": {
+      "line": 300,
+      "Random Weights": 0.043,
+      "BP": 0.019,
+      "FA": 0.004,
+      "PC": 0.028,
+      "STDP": 0.036
+    },
+    "LOC": {
+      "line": 301,
+      "Random Weights": -0.005,
+      "BP": 0.012,
+      "FA": 0.006,
+      "PC": 0.006,
+      "STDP": 0.006
+    },
+    "IT": {
+      "line": 302,
+      "Random Weights": 0.008,
+      "BP": 0.013,
+      "FA": 0.012,
+      "PC": 0.014,
+      "STDP": 0.012
+    }
+  },
+  "verdict": {
+    "bnfix": {
+      "n_cells": 20,
+      "n_reproduced": 9,
+      "failed": [
+        {
+          "paper_col": "BP",
+          "roi": "LOC",
+          "rho_meanrdm": 0.0126,
+          "published": 0.012
+        },
+        {
+          "paper_col": "BP",
+          "roi": "V1",
+          "rho_meanrdm": 0.0314,
+          "published": 0.034
+        },
+        {
+          "paper_col": "BP",
+          "roi": "V2",
+          "rho_meanrdm": 0.0169,
+          "published": 0.019
+        },
+        {
+          "paper_col": "FA",
+          "roi": "IT",
+          "rho_meanrdm": 0.0115,
+          "published": 0.012
+        },
+        {
+          "paper_col": "PC",
+          "roi": "IT",
+          "rho_meanrdm": 0.0109,
+          "published": 0.014
+        },
+        {
+          "paper_col": "PC",
+          "roi": "V1",
+          "rho_meanrdm": 0.0163,
+          "published": 0.056
+        },
+        {
+          "paper_col": "PC",
+          "roi": "V2",
+          "rho_meanrdm": 0.0075,
+          "published": 0.028
+        },
+        {
+          "paper_col": "Random Weights",
+          "roi": "V1",
+          "rho_meanrdm": 0.0755,
+          "published": 0.076
+        },
+        {
+          "paper_col": "STDP",
+          "roi": "IT",
+          "rho_meanrdm": 0.0131,
+          "published": 0.012
+        },
+        {
+          "paper_col": "STDP",
+          "roi": "V1",
+          "rho_meanrdm": 0.0372,
+          "published": 0.064
+        },
+        {
+          "paper_col": "STDP",
+          "roi": "V2",
+          "rho_meanrdm": 0.0207,
+          "published": 0.036
+        }
+      ]
+    },
+    "original": {
+      "n_cells": 20,
+      "n_reproduced": 17,
+      "failed": [
+        {
+          "paper_col": "BP",
+          "roi": "V1",
+          "rho_meanrdm": 0.0335,
+          "published": 0.034
+        },
+        {
+          "paper_col": "BP",
+          "roi": "V2",
+          "rho_meanrdm": 0.0185,
+          "published": 0.019
+        },
+        {
+          "paper_col": "Random Weights",
+          "roi": "V1",
+          "rho_meanrdm": 0.0755,
+          "published": 0.076
+        }
+      ]
+    }
+  }
+}

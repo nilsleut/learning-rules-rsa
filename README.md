@@ -2,6 +2,52 @@
 
 > ⚠️ **Correction (August 2026).** The predictive-coding and STDP results in this repository are affected by an evaluation-mode defect: both model classes overrode `eval()` with a no-op, so their batch-normalization layers stayed in training mode during feature extraction and normalized each evaluation batch by its own statistics, while the random, backpropagation and feedback-alignment conditions used their stored running statistics. Correction notes identifying the affected results accompany the current arXiv versions of both papers; repairing the defect leaves random, backpropagation and feedback alignment unchanged to within Δρ ≤ 0.0013, changes the two affected conditions substantially, and reverses the central claim of the training-dynamics study. The full repaired five-seed re-run, and the resolution analysis that came out of it, are at **[nilsleut/evaluation-resolution-rsa](https://github.com/nilsleut/evaluation-resolution-rsa)** ([arXiv:2608.12408](https://arxiv.org/abs/2608.12408)).
 
+## v3 (October 2026)
+
+Revision of arXiv:2604.16875 on the repaired five-seed model set. Tag `arxiv-v3` is the state the paper cites.
+
+**What was added**
+
+- `paper/arxiv_upload_learning_rules_v3/`: paper source, PDF, figures, generated tables (`tab_*.tex`) and numbers (`numbers.tex`), and the v2→v3 change-marked `diff_v2_v3.pdf`.
+- **Cross-run analysis** (`scripts/crossrun/`, `results/crossrun/`): RSA restricted to stimulus pairs that lie in different scanner runs for all three subjects (210,205 of 258,840 pairs), because sub-01 and sub-02 saw the stimuli in identical order. Includes diagnostics, block cleaning as a robustness variant, and the stimulus bootstrap behind every confidence interval in the paper.
+- **Noise bounds** (`scripts/noise_ceiling_v2/`, `results/noise_ceiling_v2/`): Nili lower and upper bounds with stimulus-bootstrap CIs and permutation nulls; the upper bound is not informative at N = 3.
+- **Subject check** (`scripts/sub03_check/`, `results/sub03_check/`): integrity checks on sub-03 and the shared presentation order; per-image luminance used as a low-level reference.
+- **Paper numbers** (`scripts/paper_v3/`, `results/paper_v3/`): per-subject results, seed spread, partial RSA, test accuracy, the V2 layer-assignment sensitivity (`v2_conv2_sensitivity.py`), and `make_macros.py`, which writes every number and table of the paper from these files and asserts each qualitative statement the text makes. `check_numbers.py` checks every number in the compiled PDF against its source.
+- `results/paper_v3/external/`: byte-exact copies of the resolution-study results used for the 32 px / 224 px comparison, with `PROVENANCE.txt` (repository, commit, SHA-256).
+
+**Rebuilding the paper numbers (no data needed)**
+
+```
+pip install -r requirements.txt
+make check                                     # or: python scripts/paper_v3/build_and_check.py
+```
+
+This runs `make_macros.py`, compiles the paper three times with `pdflatex`, then runs `check_numbers.py` (it reads the compiled PDF and `.aux`, so it must come last). It needs Python and a LaTeX installation with `pdflatex`, `pdftotext` (poppler) for the PDF check, and no data.
+
+**Re-running the analyses (data needed)**
+
+The data are not redistributed here.
+
+| What | Where it is expected | How to set it |
+|---|---|---|
+| THINGS-fMRI single-trial responses and metadata ([Hebart et al. 2023](https://doi.org/10.7554/eLife.82580); [OpenNeuro ds004192](https://openneuro.org/datasets/ds004192) / Figshare) | `../RSA/Datensatz` next to this repository | `THINGS_FMRI_DIR` |
+| THINGS images ([things-initiative.org](https://things-initiative.org)) | `../RSA/Datensatz/images_THINGS/object_images` | `THINGS_IMAGES_DIR` |
+| Subject RDMs (720 × 720, per ROI) | `outputs_720/` | produced by `extract_fmri_rdms_720.py --out-dir outputs_720`; `NC_FMRI_DIR` points the noise-bound scripts elsewhere |
+| Model RDMs, repaired set (5 seeds × 5 rules × 4 layers × 6 resolutions) | `learning_rules_outputs_bnfix/rdms/` | produced by the five-seed sweep in [evaluation-resolution-rsa](https://github.com/nilsleut/evaluation-resolution-rsa) (`code/learning_rules_v10_sweep_modal.py`) |
+| Model RDMs, original set (sensitivity column) | `outputs/model_rdms/` | original v2 analysis |
+
+Order:
+
+1. `python extract_fmri_rdms_720.py --data-dir $THINGS_FMRI_DIR --out-dir outputs_720`
+2. `scripts/noise_ceiling_v2/`: `step1_nili_bounds.py`, `step3a_control_column.py`, `step3b_sweep_provenance.py`, `step3c_bootstrap.py`, `step4_figure.py`, `step4_report.py`
+3. `scripts/sub03_check/`: `check123_stored_rdms.py` (writes `luminance.csv`, used below), `check4_ids.py`, `check567_raw.py`, `check8_order_confound.py`, `report.py`, `figure.py`
+4. `scripts/crossrun/`: `step1_diagnostics.py`; `step2_bootstrap.py draws`, `... perm`, `... finalize` (resumable); `step2_effects.py`; `report.py`
+5. `scripts/paper_v3/`: `compute_extra.py`, `partial_rsa.py`, `v2_conv2_sensitivity.py`, `make_figures.py`, then `make check`
+
+`test_accuracy.py` additionally needs the seed-0 checkpoints of the repaired run and `torch`/`torchvision`.
+
+---
+
 Comparing biologically plausible learning rules against human fMRI using Representational Similarity Analysis (RSA).
 
 This repository contains code, results, and figures for two related studies:

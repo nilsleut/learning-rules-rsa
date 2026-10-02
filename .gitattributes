@@ -1,0 +1,2 @@
+# byte-exact copies, sha256-checked by scripts/paper_v3/make_macros.py: no EOL conversion
+results/paper_v3/external/** -text

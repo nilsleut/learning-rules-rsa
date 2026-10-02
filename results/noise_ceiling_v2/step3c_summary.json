@@ -1,0 +1,13 @@
+{
+  "seed": 20261002,
+  "n_boot": 1000,
+  "n_workers": 10,
+  "boot_idx_sha256": "ebd87ae6da1d7c50997577a7e017eb047cf4a81c30a3671b75de0928e5ba97ae",
+  "n_pairs_median": 258481,
+  "runtime_s": 1689.0,
+  "identity_check": {
+    "max_dev_lower_vs_step1": 6.938893903907228e-17,
+    "max_dev_model_vs_step3a": 1.0061396160665481e-16,
+    "ok": true
+  }
+}

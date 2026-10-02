@@ -1,0 +1,84 @@
+{
+  "n_keys_used": 159,
+  "n_manifest": 7133,
+  "n_step2_reread": 1233,
+  "n_pdf_decimals": 796,
+  "typed_literals_allowed": [
+    [
+      76,
+      "0.076",
+      "v2 quotation (errata)"
+    ],
+    [
+      191,
+      "0.02",
+      "PC inference rate (code constant)"
+    ],
+    [
+      201,
+      "0.003",
+      "STDP A+/A- (code constant)"
+    ],
+    [
+      248,
+      "0.10",
+      "'rho < 0.10 at V1' (bound on the reported values, descriptive)"
+    ],
+    [
+      441,
+      "0.044",
+      "v2 quotation (errata)"
+    ],
+    [
+      441,
+      "0.11",
+      "v2 bound quoted in errata"
+    ],
+    [
+      441,
+      "0.09",
+      "v2 bound quoted in errata"
+    ],
+    [
+      441,
+      "0.06",
+      "v2 bound quoted in errata"
+    ],
+    [
+      441,
+      "0.07",
+      "v2 bound quoted in errata"
+    ],
+    [
+      441,
+      "0.07",
+      "v2 bound quoted in errata"
+    ],
+    [
+      441,
+      "0.05",
+      "v2 bound quoted in errata"
+    ],
+    [
+      441,
+      "0.03",
+      "v2 bound quoted in errata"
+    ],
+    [
+      441,
+      "0.04",
+      "v2 bound quoted in errata"
+    ],
+    [
+      473,
+      "10.7554",
+      "DOI prefix of Hebart et al. (2023)"
+    ],
+    [
+      523,
+      "10.1016",
+      "DOI prefix of Walther et al. (2016)"
+    ]
+  ],
+  "fails": {}
+}

@@ -1,0 +1,13 @@
+{
+  "n_pairs_total": 258840,
+  "n_pairs_P": 210205,
+  "frac_pairs_P": 0.81210400247257,
+  "runpair_significant_any_roi": false,
+  "runpair_significant_rois": [],
+  "primary_variant": "cross_run",
+  "stop_luminance_drop_gt_30pct": false,
+  "luminance_V1_frac_change_sub01_sub02": {
+    "sub-01": -0.012706727992794847,
+    "sub-02": -0.10476673677346122
+  }
+}

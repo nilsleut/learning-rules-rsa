@@ -1,0 +1,17 @@
+Copied unchanged from the resolution-study repository (git show <commit>:<path>).
+repo:   https://github.com/nilsleut/evaluation-resolution-rsa.git  (local: Projekte_2/evaluation-resolution-rsa)
+commit: 68da291df2b169c2282da277e586aebb556729d2
+
+file -> source path, sha256
+step4_gaps.csv  <- results/upsampling/step4_gaps.csv  sha256 03f8e110595ce6eef8448edf73a0820294cad628871bb9ae608a07527381a66b
+rsa_seed0.csv  <- results/upsampling/rsa_seed0.csv  sha256 f55d1f5c39c1aacc799cb40f31bbfec654c67e55f84f960aa7104c07467d8459
+rsa_seed1.csv  <- results/upsampling/rsa_seed1.csv  sha256 65903065609e1bc288435b432fd4ceda1ededf935202e5b7ca0ac44c98264958
+rsa_seed2.csv  <- results/upsampling/rsa_seed2.csv  sha256 16553b195397d4e7cb653749bdf6d78411ebbe3cb813cc05b7135a88906f93de
+rsa_seed3.csv  <- results/upsampling/rsa_seed3.csv  sha256 5f83391932c2585d3edb97ba94bf4df0f2fe71cae8dc1373c2ca7776542bbba5
+rsa_seed4.csv  <- results/upsampling/rsa_seed4.csv  sha256 fd2bf85186c5de3f4d25a8e84f534c79c3f25590491d33dcbb51e7c2d117bfed
+
+Content: model set of the resolution study (learning_rules_v12_allseeds_modal.py; same architecture
+and training as this paper, 5 seeds), cross-run pair set (210,205 pairs), per-subject and mean-RDM RSA.
+step4_gaps.csv: seed-mean paired gaps with 95% stimulus-bootstrap CIs (1000 resamples, seed 20261002).
+rsa_seed*.csv: per-seed rho (used for the Random and BP values at 32 px; NATIVE arm only).
+Only NATIVE rows are used by make_macros.py; upsampling (UPSAMPLED) results are not reported in this paper.

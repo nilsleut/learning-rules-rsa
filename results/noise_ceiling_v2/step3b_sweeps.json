@@ -1,0 +1,76 @@
+{
+  "inventory": {
+    "table": {
+      "csv": "outputs/rsa_results_seeds.csv",
+      "script": "learning_rules_v8.py (Kaggle notebook learning_rules_v8.ipynb, T4)",
+      "config": "N_EPOCHS=40, BATCH=64, LR=1e-3, N_CIFAR=8000; CIFAR subset drawn once with seed 42 and shared by all seeds (learning_rules_v8.py:987-992); num_workers=0; pre-BN-fix",
+      "mtime": "2026-04-27 05:14",
+      "seeds": [
+        42,
+        123,
+        456,
+        789,
+        1337
+      ],
+      "n_seeds": 5
+    },
+    "june_sweep": {
+      "csv": "outputs/rsa_resolution_sweep.csv",
+      "script": "learning_rules_v9_sweep_modal.py, June version (copy: Projekte_2/merged_paper/learning_rules_v9_sweep_modal.py, 2026-06-04)",
+      "config": "N_EPOCHS=40, BATCH=128, LR=1e-3, N_CIFAR=8000; CIFAR subset re-drawn per seed (manual_seed(seed) before randperm); num_workers=4; Modal T4; pre-BN-fix; retrained from scratch",
+      "mtime": "2026-06-05 07:38",
+      "seeds": [
+        42,
+        123,
+        456,
+        789,
+        1337
+      ],
+      "n_seeds": 5
+    },
+    "bnfix": {
+      "csv": "learning_rules_outputs_bnfix/rsa_resolution_sweep.csv",
+      "script": "learning_rules_v10_sweep_modal.py (= v9 August version + merge check)",
+      "config": "as june_sweep, plus BN-mode fix for PC/STDP and explicit train/eval mode per phase; retrained from scratch",
+      "mtime": "2026-08-08 17:35",
+      "seeds": [
+        42,
+        123,
+        456,
+        789,
+        1337
+      ],
+      "n_seeds": 5
+    }
+  },
+  "duplicates": {
+    "old_sweep.csv": {
+      "same_as": "outputs/rsa_resolution_sweep.csv",
+      "identical": true
+    },
+    "bnfix_sweep.csv": {
+      "same_as": "learning_rules_outputs_bnfix/rsa_resolution_sweep.csv",
+      "identical": true
+    }
+  },
+  "flagged_table_vs_bnfix": [],
+  "max_abs_table_minus_bnfix": 0.0020449922637503642,
+  "max_abs_june_minus_bnfix_V1": 0.0006126000000000013,
+  "max_abs_june_minus_bnfix_all": 0.0007304000000000008,
+  "correction_note_delta_check": {
+    "max_abs_june_vs_bnfix_V1_all_res": 0.0013381999999999838,
+    "worst_cell": {
+      "rule": "Backprop",
+      "res": 32,
+      "bnfix_minus_june": 0.0013381999999999838
+    },
+    "resolutions": [
+      32,
+      64,
+      96,
+      128,
+      160,
+      224
+    ]
+  }
+}

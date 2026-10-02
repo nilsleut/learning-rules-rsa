@@ -1,0 +1,72 @@
+{
+  "validation_conv1_vs_step2_max_dev": 0.0,
+  "primary_same": false,
+  "checks": {
+    "random_weights - backprop": {
+      "conv1": [
+        0.0165,
+        0.0072,
+        0.0261
+      ],
+      "conv2": [
+        0.0526,
+        0.0401,
+        0.0656
+      ],
+      "same_sign_and_significance": true
+    },
+    "random_weights - feedback_alignment": {
+      "conv1": [
+        0.0252,
+        0.015,
+        0.0361
+      ],
+      "conv2": [
+        0.0313,
+        0.0212,
+        0.0413
+      ],
+      "same_sign_and_significance": true
+    },
+    "backprop - feedback_alignment": {
+      "conv1": [
+        0.0087,
+        0.0053,
+        0.0125
+      ],
+      "conv2": [
+        -0.0213,
+        -0.0274,
+        -0.0148
+      ],
+      "same_sign_and_significance": false
+    },
+    "predictive_coding - feedback_alignment": {
+      "conv1": [
+        0.0021,
+        0.0005,
+        0.0037
+      ],
+      "conv2": [
+        -0.0005,
+        -0.0035,
+        0.0027
+      ],
+      "same_sign_and_significance": false
+    },
+    "stdp - feedback_alignment": {
+      "conv1": [
+        0.011,
+        0.0077,
+        0.0146
+      ],
+      "conv2": [
+        0.0097,
+        0.0047,
+        0.0152
+      ],
+      "same_sign_and_significance": true
+    }
+  },
+  "runtime_s": 0.1
+}

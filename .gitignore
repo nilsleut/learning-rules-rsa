@@ -7,3 +7,16 @@ __pycache__/
 *.pyo
 data/
 *_partial.csv
+
+# v3: local data (not redistributed) and build products
+outputs_720/
+outputs/model_rdms/
+learning_rules_outputs_bnfix/
+rdms_runz/
+*.npz
+*.h5
+results/crossrun/_parts/
+*.aux
+*.log
+*.out
+*.synctex.gz

@@ -1,0 +1,9 @@
+{
+  "pixel_rdm_sha256": "3a692611ad43745ed5a33e7991f6a7336d200991e798b9acf7cb481ae426e3d4",
+  "validation_max_dev_std": 4.7511421487601846e-05,
+  "validation_max_dev_partial": 4.4156092374951494e-05,
+  "boot_seed": 20261002,
+  "n_boot": 1000,
+  "std_max_dev_vs_crossrun_step2": 9.974659986866641e-17,
+  "runtime_s": 3461.0
+}

@@ -1,0 +1,6 @@
+{
+  "boot_seed": 20261002,
+  "n_boot": 1000,
+  "max_dev_vs_crossrun_step2": 9.8879238130678e-17,
+  "runtime_s": 928.6
+}
