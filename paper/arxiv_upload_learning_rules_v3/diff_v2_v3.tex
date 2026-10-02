@@ -1,7 +1,7 @@
 \documentclass[10pt,twocolumn]{article}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL arxiv_upload_learning_rules_v2/learning_rules_rsa_paper_v2.tex   Fri Aug 14 10:05:43 2026
-%DIF ADD arxiv_upload_learning_rules_v3/learning_rules_rsa_paper_v3.tex   Fri Oct  2 20:41:12 2026
+%DIF ADD arxiv_upload_learning_rules_v3/learning_rules_rsa_paper_v3.tex   Fri Oct  2 21:57:46 2026
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -739,12 +739,12 @@ Code and results: \DIFdelbegin %DIFDELCMD < \url{https://github.com/nilsleut/lea
 \input{tab_v2conv2.tex}}
 \end{table}
 
-\textbf{\DIFadd{Correction for multiple comparisons}} \DIFadd{(Table~\ref{tab:fdr}). Two-sided bootstrap $p$-values from the same $\NV{nboot}$ resamples, $p = (2\min(\#\{d_b \le 0\}, \#\{d_b \ge 0\}) + 1)/(B + 1)$, corrected by Benjamini--Hochberg (false discovery rate) and by Holm (family-wise error rate), each at the 5\,\% level, within the current family of $\NV{nprimary}$ primary comparisons and within the earlier family of $\NV{nprimary.old}$, which also contained FA against every other condition at V2. All $\NV{nprimary}$ comparisons remain significant under both corrections and both families.
+\textbf{\DIFadd{Correction for multiple comparisons}} \DIFadd{(Table~\ref{tab:fdr}). Two-sided bootstrap $p$-values from the same $\NV{nboot}$ resamples, $p = (2\min(\#\{d_b \le 0\}, \#\{d_b \ge 0\}) + 1)/(B + 1)$, corrected by Benjamini--Hochberg (false discovery rate) and by Holm (family-wise error rate), each at the 5\,\% level, within the current family of $\NV{nprimary}$ primary comparisons and within the earlier family of $\NV{nprimary.old}$, which also contained FA against every other condition at V2. All $\NV{nprimary.old}$ comparisons of the earlier family, including the four at V2, are significant under both corrections, and all $\NV{nprimary}$ of the current family under both corrections in both families.
 }
 
 \begin{table*}[t]
 \centering
-\caption{\DIFaddFL{Primary comparisons with bootstrap $p$-values and adjusted $p$-values (Benjamini--Hochberg, Holm) within the family of $\NV{nprimary}$ and the earlier family of $\NV{nprimary.old}$. Per-subject convention, cross-run pairs, repaired model set. The smallest attainable bootstrap $p$ is $1/(B+1)$.}}
+\caption{\DIFaddFL{All $\NV{nprimary.old}$ comparisons of the earlier primary family with bootstrap $p$-values and adjusted $p$-values (Benjamini--Hochberg, Holm) within the current family of $\NV{nprimary}$ (above the line) and within the earlier family of $\NV{nprimary.old}$ (all rows; the four below the line belonged to the earlier family only). Per-subject convention, cross-run pairs, repaired model set. The smallest attainable bootstrap $p$ is $1/(B+1)$.}}
 \label{tab:fdr}
 \small
 \input{tab_fdr.tex}

@@ -610,12 +610,17 @@ def main():
     fd = pd.read_csv(FD)
     assert not json.loads((P3 / "primary_fdr.json").read_text())["any_decision_differs_7_vs_11_or_vs_uncorrected"]
     f7 = fd[fd.in_family7]
-    assert len(f7) == 7 and f7[["uncorrected_sig", "bh_sig_fam7", "bh_sig_fam11", "holm_sig_fam7",
-                                "holm_sig_fam11"]].all().all()           # text: no decision changes
+    assert len(f7) == 7 and len(fd) == 11
+    # text: no significance decision changes, in either family, under either correction --
+    # including the four FA-at-V2 comparisons of the earlier family of 11
+    assert f7[["bh_sig_fam7", "holm_sig_fam7"]].all().all()
+    assert fd[["uncorrected_sig", "bh_sig_fam11", "holm_sig_fam11"]].all().all()
     L = ["\\begin{tabular}{llcccccc}", "\\toprule",
          "Comparison & ROI & $\\Delta\\rho_{\\text{subj}}$ [95\\% CI] & $p_{\\text{boot}}$ & BH, 7 & BH, 11 & Holm, 7 & Holm, 11 \\\\",
          "\\midrule"]
-    for _, r in f7.iterrows():
+    for i, (_, r) in enumerate(fd.iterrows()):
+        if i == 7:
+            L.append("\\midrule")                    # rows below: family of 11 only (FA at V2)
         a, b = r.comparison.split("-")
         k = f"fdr.{a}.{b}.{r.roi}"
         sel = f"{r.comparison} {r.roi}"
@@ -624,7 +629,10 @@ def main():
         put(k + ".hi", r.ci_hi, 4, rel(FD), f"{sel} ci_hi")
         cells = []
         for c in ("p_boot", "bh_p_fam7", "bh_p_fam11", "holm_p_fam7", "holm_p_fam11"):
-            cells.append(f"${put(f'{k}.{c}', r[c], 4, rel(FD), f'{sel} {c}')}$")
+            if c.endswith("fam7") and not r.in_family7:
+                cells.append("--")
+            else:
+                cells.append(f"${put(f'{k}.{c}', r[c], 4, rel(FD), f'{sel} {c}')}$")
         L.append(f"{RNAME[a]} $-$ {RNAME[b]} & {r.roi} & ${MAC[k + '.d']}\\;[{MAC[k + '.lo']},{MAC[k + '.hi']}]$ & "
                  + " & ".join(cells) + " \\\\")
     L += ["\\bottomrule", "\\end{tabular}"]

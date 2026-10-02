@@ -7178,6 +7178,30 @@ fdr.fa.stdp.V1.bh_p_fam7,0.0013986013986013,4,0.0014,results/paper_v3/primary_fd
 fdr.fa.stdp.V1.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,fa-stdp V1 bh_p_fam11,False
 fdr.fa.stdp.V1.holm_p_fam7,0.0069930069930069,4,0.0070,results/paper_v3/primary_fdr.csv,fa-stdp V1 holm_p_fam7,False
 fdr.fa.stdp.V1.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,fa-stdp V1 holm_p_fam11,False
+fdr.rnd.fa.V2.d,0.0252234585473121,4,+0.0252,results/paper_v3/primary_fdr.csv,rnd-fa V2 diff,False
+fdr.rnd.fa.V2.lo,0.014956830992072,4,0.0150,results/paper_v3/primary_fdr.csv,rnd-fa V2 ci_lo,False
+fdr.rnd.fa.V2.hi,0.0360959111909179,4,0.0361,results/paper_v3/primary_fdr.csv,rnd-fa V2 ci_hi,False
+fdr.rnd.fa.V2.p_boot,0.0009990009990009,4,0.0010,results/paper_v3/primary_fdr.csv,rnd-fa V2 p_boot,False
+fdr.rnd.fa.V2.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,rnd-fa V2 bh_p_fam11,False
+fdr.rnd.fa.V2.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,rnd-fa V2 holm_p_fam11,False
+fdr.bp.fa.V2.d,0.0086947719219715,4,+0.0087,results/paper_v3/primary_fdr.csv,bp-fa V2 diff,False
+fdr.bp.fa.V2.lo,0.0052689423274628,4,0.0053,results/paper_v3/primary_fdr.csv,bp-fa V2 ci_lo,False
+fdr.bp.fa.V2.hi,0.0125416092600482,4,0.0125,results/paper_v3/primary_fdr.csv,bp-fa V2 ci_hi,False
+fdr.bp.fa.V2.p_boot,0.0009990009990009,4,0.0010,results/paper_v3/primary_fdr.csv,bp-fa V2 p_boot,False
+fdr.bp.fa.V2.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,bp-fa V2 bh_p_fam11,False
+fdr.bp.fa.V2.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,bp-fa V2 holm_p_fam11,False
+fdr.fa.pc.V2.d,-0.0021045159373133,4,-0.0021,results/paper_v3/primary_fdr.csv,fa-pc V2 diff,False
+fdr.fa.pc.V2.lo,-0.0036535907757336,4,-0.0037,results/paper_v3/primary_fdr.csv,fa-pc V2 ci_lo,False
+fdr.fa.pc.V2.hi,-0.0004744385765659,4,-0.0005,results/paper_v3/primary_fdr.csv,fa-pc V2 ci_hi,False
+fdr.fa.pc.V2.p_boot,0.0089910089910089,4,0.0090,results/paper_v3/primary_fdr.csv,fa-pc V2 p_boot,False
+fdr.fa.pc.V2.bh_p_fam11,0.0098901098901098,4,0.0099,results/paper_v3/primary_fdr.csv,fa-pc V2 bh_p_fam11,False
+fdr.fa.pc.V2.holm_p_fam11,0.0179820179820179,4,0.0180,results/paper_v3/primary_fdr.csv,fa-pc V2 holm_p_fam11,False
+fdr.fa.stdp.V2.d,-0.0109814416066095,4,-0.0110,results/paper_v3/primary_fdr.csv,fa-stdp V2 diff,False
+fdr.fa.stdp.V2.lo,-0.0145545585172985,4,-0.0146,results/paper_v3/primary_fdr.csv,fa-stdp V2 ci_lo,False
+fdr.fa.stdp.V2.hi,-0.0077156331332703,4,-0.0077,results/paper_v3/primary_fdr.csv,fa-stdp V2 ci_hi,False
+fdr.fa.stdp.V2.p_boot,0.0009990009990009,4,0.0010,results/paper_v3/primary_fdr.csv,fa-stdp V2 p_boot,False
+fdr.fa.stdp.V2.bh_p_fam11,0.0013736263736263,4,0.0014,results/paper_v3/primary_fdr.csv,fa-stdp V2 bh_p_fam11,False
+fdr.fa.stdp.V2.holm_p_fam11,0.0109890109890109,4,0.0110,results/paper_v3/primary_fdr.csv,fa-stdp V2 holm_p_fam11,False
 nprimary.old,,-1,11,results/paper_v3/primary_fdr.csv,size of the earlier primary family,False
 nprimary,,-1,7,make_macros.py PRIMARY,number of primary comparisons,False
 v2quote.0,,-1,0.076,learning_rules_rsa_paper_v2.tex,"printed value: Random, V1",False
